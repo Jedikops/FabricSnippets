@@ -1,8 +1,8 @@
 ## Office Fabric UI Snippets for VS Code ##
 
-**Release Date**: Feb 26, 2016
+**Release Date**: March 25, 2016
 
-**Status**: Beta
+**Status**: 1.0
 
 **Provided By**: Sector 43 Software (David Mann)
 
@@ -13,7 +13,7 @@
 ----------
 
 
-These snippets are a first go at making the Office UI Fabric easier to use.  In general, the HTML is taken directly from the Office UI Fabric GitHub repository, with some tweaking.
+These snippets are intended to make the [Office UI Fabric](https://github.com/OfficeDev/Office-UI-Fabric) easier to use.  In general, the HTML is taken directly from the Office UI Fabric GitHub repository, with some tweaking.
 
 Snippets generally fall into one of two flavors:
 
@@ -22,7 +22,22 @@ Snippets generally fall into one of two flavors:
 
 - **Complex Components**: these aren't really "complex" they simply have some JavaScript associated with them.  In these cases, there is a snippet for the component and one for an example of the JavaScript required to make the component work.
 
-All of the snippets have a trigger that starts with **uif-** so you can see what's available by simply typing **uif-** and looking at the Intellisense popup shown by VS Code.
+All of the core snippets have a trigger that starts with **uif-** so you can see what's available by simply typing **uif-** and looking at the Intellisense popup shown by VS Code.
+These snippets were originally developed for my [Pluralsight course](http://s43.io/FabricCourse2) so there are a handful of snippets that I built for the demos in that course.  I've left them in just in case they provide value, or if you're following along with the course.  Here's the info on them:
+
+- **htmlShell** - Creates the shell of an HTML page with the proper doctype for Fabric
+- **jsAddPeoplePickerResult** - sample code for adding a result into the Peoplepicker
+- **gridRefRow** - adds a single grid row with each cell set to 1 column wide.  Useful for building a grid below and having a reference to see how many columns each cell takes up
+- **gridDemoStyle** - some style overrides used to differentiate the sample grid in the course
+- **gridDemoRows** - inserts the sample markup for a three column grid used as a demo in the course
+- **callOutPositioning** - sample styles for positioning a callOut
+- **callOutPositioningJS** - sample code for showing the callout in the demo
+- **spinnerDemo** - sample markup for working with the Spinner component
+- **commandBarDemo** - sample code for adding a ContextualMenu to a CommandBar
+- **progressDemo** - sample code and markup for the Progress Indicator demo
+
+
+
 
 #Installation Instructions#
 
@@ -41,14 +56,7 @@ The snippets are now available when you are editing an HTML file in VS Code.  (*
 Installation and usage is shown in the short video here: [https://youtu.be/VsfUTwgNdgg](https://youtu.be/VsfUTwgNdgg)
 
 ## Known Issues ##
-The following components are not currently supported by the snippets:
-
-- Facepile
-- People Picker
-- Persona
-- Persona Card
-
-They'll be coming in the next release.
+- None
 
 Please report other issues here: [https://github.com/Sector43/FabricSnippets/issues](https://github.com/Sector43/FabricSnippets/issues)
 
