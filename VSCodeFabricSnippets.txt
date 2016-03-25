@@ -1,4 +1,263 @@
 {
+"HTML Shell": {
+    "prefix": "htmlShell",
+    "description": "",
+    "body": [
+                "<!doctype html>",
+                "<html>",
+                "<head>",
+                "",
+                "</head>",
+                "<body>",
+                "",
+                "",
+                "</body>",
+                "</html>"
+    ]
+}
+
+,"JS Sample for People Picker Interactivity": {
+    "prefix": "jsAddPeoplePickerResult",
+    "description": "",
+    "body": [
+                "<button id='id' class='ms-Button'>",
+                "    <span id='id-label' class='ms-Button-label' onclick='addPPResult()'>Add User Result</span>",
+                "</button>",
+                "<button id='id' class='ms-Button'>",
+                "    <span id='id-label' class='ms-Button-label' onclick='getPPSelected()'>Get Selected Users</span>",
+                "</button>",
+                "<button id='id' class='ms-Button'>",
+                "    <span id='id-label' class='ms-Button-label' onclick='removePPResult()'>Remove User Result</span>",
+                "</button>",
+                "<script type='text/javascript'>",
+                "function addPPResult(){",
+                "    var resultHtml = \"<li id='user2' class='ms-PeoplePicker-result'> \" + ",
+                "        \"<div tabindex='0' role='button' class='ms-PeoplePicker-resultBtn'> \" + ",
+                "    		\"<div class='ms-Persona ms-Persona--square'> \" + ",
+                "    		 \"<div class='ms-Persona-imageArea'> \" + ",
+                "    			 \"<i class='ms-Persona-placeholder ms-Icon ms-Icon--person'></i> \" + ",
+                "    			 \"<img class='ms-Persona-image' src=''> \" + ",
+                "    		 \"</div> \" + ",
+                "    		 \"<div class='ms-Persona-presence'></div> \" + ",
+                "    		 \"<div class='ms-Persona-details'> \" + ",
+                "    			 \"<div class='ms-Persona-primaryText'>User2</div> \" + ",
+                "    			 \"<div class='ms-Persona-secondaryText'>Dept2</div> \" + ",
+                "    		 \"</div> \" + ",
+                "    		 \"<button class='ms-PeoplePicker-resultAction js-resultRemove'><i class='ms-Icon ms-Icon--x'></i></button> \" + ",
+                "    		\"</div> \" + ",
+                "        \"</div> \" + ",
+                "    \"</li>\";",
+                "    var resultList = $('ul.ms-PeoplePicker-resultList')[0]",
+                "    $(resultList).append(resultHtml);",
+                "}",
+                "function removePPResult(){",
+                "    $('.ms-PeoplePicker-resultList').find('.ms-Persona-primaryText:contains(\"User2\")').each(",
+                "        function( index, value ) {",
+                "            $(value).closest('li').remove();",
+                "        });",
+                "}",
+
+                "function getPPSelected(){",
+                "$('.ms-PeoplePicker-searchBox').find('.ms-Persona-primaryText').each(",
+                "    function( index, value ) {",
+                "      alert( $(value).text() );",
+                "    });",
+                "}",
+                "</script>"
+
+    ]
+}
+
+,"Grid Reference Row": {
+    "prefix": "gridRefRow",
+    "description": "",
+    "body": [
+                "<div class='ms-Grid-row'>",
+                "    <div class='ms-Grid-col ms-u-sm1 refCol'>1</div>",
+                "    <div class='ms-Grid-col ms-u-sm1 refCol'>2</div>", 
+                "    <div class='ms-Grid-col ms-u-sm1 refCol'>3</div>", 
+                "    <div class='ms-Grid-col ms-u-sm1 refCol'>4</div>", 
+                "    <div class='ms-Grid-col ms-u-sm1 refCol'>5</div>", 
+                "    <div class='ms-Grid-col ms-u-sm1 refCol'>6</div>", 
+                "    <div class='ms-Grid-col ms-u-sm1 refCol'>7</div>", 
+                "    <div class='ms-Grid-col ms-u-sm1 refCol'>8</div>", 
+                "    <div class='ms-Grid-col ms-u-sm1 refCol'>9</div>", 
+                "    <div class='ms-Grid-col ms-u-sm1 refCol'>10</div>", 
+                "    <div class='ms-Grid-col ms-u-sm1 refCol'>11</div>", 
+                "    <div class='ms-Grid-col ms-u-sm1 refCol'>12</div>",
+                "</div>",
+                "<hr /><br />" 
+    ]
+}
+
+,"Grid Demo Style Override": {
+    "prefix": "gridDemoStyle",
+    "description": "",
+    "body": [
+                "<style type='text/css'>",
+                ".ms-Grid-col{",
+                "    border:1px solid black;",
+                "}",
+                ".header, .footer{",
+                "    background-color:gray;",   
+                "}",
+                "</style>"
+    ]
+}
+
+,"Grid Demo Row": {
+    "prefix": "gridDemoRows",
+    "description": "Inserts markup for grid demo",
+    "body": [
+                "<div class='ms-Grid-row'> ",
+                "	<div class='ms-Grid-col ms-u-sm12 header'>Header</div>  ",
+                "</div> ",
+                "<div class='ms-Grid-row'> ",
+                "    <div class='ms-Grid-col'>Left Bar</div>          ",
+                "    <div class='ms-Grid-col'></div>",
+                "    <div class='ms-Grid-col'>Right Bar</div>",
+                "</div>",
+                "<div class='ms-Grid-row'> ",
+                "	<div class='ms-Grid-col ms-u-sm12 footer'>Footer</div>  ",
+                "</div>"
+    ]
+}
+
+,"Callout Positioning Markup": {
+    "prefix": "callOutPositioning",
+    "description": "Inserts markup for callout positioning demo",
+    "body": [
+                "<style type='text/css'>",
+                "\t.ms-Callout{",
+                "\t display:none;",
+                "\t margin-top:-60px;",
+                "\t left:15px;",
+                "\t}",
+                "\t",
+                "\t#clickMe{",
+                "\t padding-top:100px;",
+                "\t}",
+                "</style>",
+                "<i id='clickMe' class='ms-Icon ms-Icon--alert' onclick='showCallout()'></i>"
+    ]
+}
+
+,"Callout Positioning JS": {
+    "prefix": "callOutPositioningJS",
+    "description": "Inserts script for callout positioning demo",
+    "body": [
+                "<script>",
+                "\tfunction showCallout(){",
+                "\t\t$('.ms-Callout').show();",
+                "\t\t",
+                "\t}",
+                "</script>"
+    ]
+}
+
+,"Spinner Demo Markup": {
+    "prefix": "spinnerDemo",
+    "description": "",
+    "body": [
+                "<style>",
+                "\t.ms-Spinner{",
+                "\t\tdisplay:none;",
+                "\t}",
+                "</style>",
+                "<button class='ms-Button'>",
+                "    <span id='id-label' class='ms-Button-label' onclick='startSpinner(\"id\", \"Loading Demo Spinner...\")'>Start Spinner</span>",
+                "</button>",
+                "<hr />"
+    ]
+}
+
+,"CommandBar Demo": {
+    "prefix": "commandBarDemo",
+    "description": "",
+    "body": [
+                "<script type='text/javascript'>",
+                "\tfunction setCtxMenuAssociations(){",
+                "\t\t$('.ms-CommandBarItem--hasMenu').each(function(index,value){",
+                "\t\t\t$(value).on('click', function(e){",
+                "\t\t\t\tshowCtxMenu(value,e);});",
+                "\t\t\t",
+                "\t\t});",
+                "\t}",
+                "\tfunction showCtxMenu(item,e){",
+                "\t\tvar targetCtx = item.dataset['ctxid'];",
+                "\t\tvar ctxMenu = $('#' + targetCtx);",
+                "\t\t",
+                "\t\tctxMenu.attr('style','position:absolute;left:' + (e.clientX - 5) + 'px;top:' + (e.clientY - 5) + 'px');",
+                "\t\tctxMenu.addClass('is-open');",
+                "\t\t$(ctxMenu).on('mouseleave', function(){",
+                "\t\t\t\t$(this).off('mouseleave');",
+                "\t\t\t\thideCtxMenu(item);});",
+                "\t}",
+                "\t",
+                "\tfunction hideCtxMenu(item){",
+                "\t\tvar targetCtx = item.dataset['ctxid'];",
+                "\t\tvar ctxMenu = $('#' + targetCtx)[0];",
+                "\t\tif($(ctxMenu).hasClass('is-open')){",
+                "\t\t\t$(ctxMenu).removeClass('is-open');",
+                "\t\t}",
+                "\t}",                
+                "</script>"
+    ]
+}
+
+,"Demo JS/Markup for Progress Indicator": {
+    "prefix": "progressDemo",
+    "description": "",
+    "body": [
+                "<button id='id-btn1' class='ms-Button' onClick='setName(\"the name\")'>",
+                "\t<span id='id-btnlabel' class='ms-Button-label' >Set Name</span>",
+                "</button> ",
+                "<button id='id-btn2' class='ms-Button' onClick='setDescription(\"the description\")'>",
+                "\t<span id='id-btnlabel' class='ms-Button-label' >Set Description</span>",
+                "</button> ",
+                "<button id='id-btn3' class='ms-Button' onClick='setProgressPercent(.25)'>",
+                "\t<span id='id-btnlabel' class='ms-Button-label' >Set Progress Percent</span>",
+                "</button> ",
+                "<button id='id-btn4' class='ms-Button' onClick='setTotal(50)'>",
+                "\t<span id='id-btnlabel' class='ms-Button-label' >Set Total</span>",
+                "</button> ",
+                "<button id='id-btn5' class='ms-Button' onClick='setProgress(25)'>",
+                "\t<span id='id-btnlabel' class='ms-Button-label' >Set Progress</span>",
+                "</button>",
+                "<script>",
+                "function setProgressPercent(percent){",
+                "\tif (typeof component !== 'undefined') {",
+                "\t\tcomponent.setProgressPercent(percent);",
+                "\t}",
+                "}",
+                "",
+                "function setName(name){",
+                "\tif (typeof component !== 'undefined') {",
+                "\t\tcomponent.setName(name);",
+                "\t}",
+                "}",
+                "",
+                "function setDescription(desc){",
+                "\tif (typeof component !== 'undefined') {",
+                "\t\tcomponent.setDescription(desc);",
+                "\t}",
+                "}",
+                "",
+                "function setProgress(num){",
+                "\tif (typeof component !== 'undefined') {",
+                "\t\tcomponent.setProgress(num);",
+                "\t}",
+                "}",
+                "",
+                "function setTotal(total){",
+                "\tif (typeof component !== 'undefined') {",
+                "\t\tcomponent.setProgressPercent(0);",
+                "\t\tcomponent.setTotal(total);",
+                "\t}",
+                "}",
+                "</script>"
+    ]
+}
 
 /******************
 Office UI Fabric, VS Code Snippets
@@ -12,12 +271,46 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
 */
 
 /*******************CDN References*************************/
-"CDN References": {
+,"CDN References": {
     "prefix": "uif-cdn",
     "description": "Add Fabric 2.0.1 CDN link tags",
     "body": [
             "<link rel='stylesheet' href='http://appsforoffice.microsoft.com/fabric/2.0.1/fabric.min.css'>",
             "<link rel='stylesheet' href='http://appsforoffice.microsoft.com/fabric/2.0.1/fabric.components.min.css'>"
+    ]
+}
+
+,"Local References": {
+    "prefix": "uif-localRef",
+    "description": "Add Fabric 2.0.1 local link tags",
+    "body": [
+                "<link rel='stylesheet' href='fabric/fabric.min.css' />",
+                "<link rel='stylesheet' href='fabric/fabric.components.min.css' />",
+                "<script type='text/javascript' src='fabric/jquery.fabric.min.js' ></script>",
+                "<!--Correct paths as necessary-->"
+    ]
+}
+
+
+/*******************Minimum Page*************************/
+,"Fabric Minimum Page": {
+    "prefix": "uif-minPage",
+    "description": "Inserts the minimum markup necessary for a Fabric page",
+    "body": [
+                "<!doctype html>",
+                "<html>",
+                "<head>",
+                "<link rel='stylesheet' href='fabric/fabric.min.css' />",
+                "<link rel='stylesheet' href='fabric/fabric.components.min.css' />",
+                "<script type='text/javascript' src='https://code.jquery.com/jquery-2.1.4.min.js'></script>",
+                "<script type='text/javascript' src='fabric/jquery.fabric.min.js' ></script>",
+                "<!--Correct paths as necessary-->",
+                "</head>",
+                "<body>",
+                "",
+                "",
+                "</body>",
+                "</html>"
     ]
 }
 
@@ -36,29 +329,22 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
                     "\t\t</div>",
                 "\t</div>",
                 "\t<ul id='${1:id}-list' class='ms-Breadcrumb-list'>",
-                    "\t\t<li class='ms-Breadcrumb-listItem'>",
-                    "\t\t\t<a class='ms-Breadcrumb-itemLink' href='#' tabindex='2'>${2:Item 1}</a>",
-                    "\t\t\t<i class='ms-Breadcrumb-chevron ms-Icon ms-Icon--chevronRight'></i>",
-                    "\t\t</li>",
-                    "\t\t<li class='ms-Breadcrumb-listItem'>",
-                    "\t\t\t<a class='ms-Breadcrumb-itemLink' href='#' tabindex='3'>${3:Item 2}</a>",
-                    "\t\t\t<i class='ms-Breadcrumb-chevron ms-Icon ms-Icon--chevronRight'></i>",
-                    "\t\t</li>",
-                    "\t\t<li class='ms-Breadcrumb-listItem'>",
-                    "\t\t\t<a class='ms-Breadcrumb-itemLink' href='#' tabindex='4'>${4:Item 3}</a>",
-                    "\t\t\t<i class='ms-Breadcrumb-chevron ms-Icon ms-Icon--chevronRight'></i>",
-                    "\t\t</li>",  
-                    "\t\t<li class='ms-Breadcrumb-listItem'>",
-                    "\t\t\t<a class='ms-Breadcrumb-itemLink' href='#' tabindex='4'>${4:Item 4}</a>",
-                    "\t\t\t<i class='ms-Breadcrumb-chevron ms-Icon ms-Icon--chevronRight'></i>",
-                    "\t\t</li>",
-                    "\t\t<li class='ms-Breadcrumb-listItem'>",
-                    "\t\t\t<a class='ms-Breadcrumb-itemLink' href='#' tabindex='4'>${4:Item 5}</a>",
-                    "\t\t\t<i class='ms-Breadcrumb-chevron ms-Icon ms-Icon--chevronRight'></i>",
-                    "\t\t</li>",  
+                "\t\t<!-- Breadcrumb items go here ",
+                "\t\tUse snippet uif-breadItem -->",                    
                 "\t</ul>",
                 "</div>"
                 ]        
+    }
+    
+    ,"Breadcrumb Item": {
+        "prefix": "uif-breadItem",
+        "description": "Markup for a single breadcrumb item",
+        "body": [
+                    "<li class='ms-Breadcrumb-listItem'>",
+                    "\t<a class='ms-Breadcrumb-itemLink' href='#' tabindex='1'>${1:Item 1}</a>",
+                    "\t<i class='ms-Breadcrumb-chevron ms-Icon ms-Icon--chevronRight'></i>",
+                    "</li>",
+        ]
     }
     
 ,"Fabric Breadcrumb JS": {
@@ -76,11 +362,8 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
                 "\t\t\t\tcomponent = new fabric['Breadcrumb'](elements[i]);",
                 "\t\t\t  }",
                 "\t\t\t}",
-                "\t\t  }",
-                "\t\tif ($.fn.Breadcrumb) {\t\t",
-                "\t\t\t  $('.ms-Breadcrumb').Breadcrumb();",
-                "\t\t}",
-                "\t});",
+                "\t\t  }", 
+                "\t});",               
                 "</script>"
     ]
 }    
@@ -100,7 +383,7 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
         "prefix": "uif-buttonPrimary",
         "body": [
 			"<button id='${1:id}' class='ms-Button ms-Button--primary'>",
-			"\t<span id='${1:id}-label' class='ms-Button-label'>$2</span>",		  
+			"\t<span id='${1:id}-label' class='ms-Button-label'>${2:Button Text}</span>",		  
 			"</button>"	
         ],
         "description": "Primary Fabric button"
@@ -110,7 +393,7 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
         "body": [
 			"<button id='${1:id}' class='ms-Button ms-Button--command'>",
             "\t<span id='${1:id}-icon' class='ms-Button-icon'><i class='ms-Icon ms-Icon--plus'></i></span>",
-            "\t<span id='${1:id}-label' class='ms-Button-label'>$2</span>",
+            "\t<span id='${1:id}-label' class='ms-Button-label'>${2:Button Text}</span>",
             "</button>"	
         ],
         "description": "Command Fabric button - shows designated icon to left of button label"
@@ -119,8 +402,8 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
         "prefix": "uif-buttonCompound",
         "body": [
 			"<button id='${1:id}' class='ms-Button ms-Button--compound'>",
-            "\t<span id='${1:id}-label' class='ms-Button-label'>$2</span>",
-            "\t<span id='${1:id}-desc' class='ms-Button-description'>$3</span>",
+            "\t<span id='${1:id}-label' class='ms-Button-label'>${2:Button Text}</span>",
+            "\t<span id='${1:id}-desc' class='ms-Button-description'>${2:Button Description}</span>",
             "</button>"	
         ],
         "description": "Compound Fabric button - shows descriptive text below button label"
@@ -130,7 +413,7 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
         "body": [
 			"<button id='${1:id}' class='ms-Button ms-Button--hero'>",
             "\t<span id='${1:id}-icon' class='ms-Button-icon'><i class='ms-Icon ms-Icon--plus'></i></span>",
-            "\t<span id='${1:id}-label' class='ms-Button-label'>$2</span>",
+            "\t<span id='${1:id}-label' class='ms-Button-label'>${2:Button Text}</span>",
             "</button>"	
         ],
         "description": "Hero Fabric button - shows styled button label and designated icon"
@@ -141,7 +424,7 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
     "prefix": "uif-callout",
     "description": "Standard Fabric Callout",
     "body": [
-            "<div id='${1:id}' class='ms-Callout ms-Callout--arrow${2:ArrowDirection}'>",
+            "<div id='${1:id}' class='ms-Callout ms-Callout--arrow${2:Direction}'>     <!-- Additional classes: ms-Callout--OOBE, ms-Callout--peek  -->",
             "\t<div class='ms-Callout-main'>",
             "\t\t<div id='${1:id}-header' class='ms-Callout-header'>",
             "\t\t\t<p id='${1:id}-title' class='ms-Callout-title'>${3:Title}</p>",
@@ -165,55 +448,6 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
     ]
 }
 
-,"Fabric Peek Callout": {
-    "prefix": "uif-callpeek",
-    "description": "Peek-style Fabric callout",
-    "body": [
-            "<div id='${1:id}' class='ms-Callout ms-Callout--peek ms-Callout--arrow${2:ArrowDirection}'>",
-            "\t<div class='ms-Callout-main'>",
-            "\t\t<div id='${1:id}-header' class='ms-Callout-header'>",
-            "\t\t\t<p id='${1:id}-title' class='ms-Callout-title'>${3:Title}</p>",
-            "\t\t</div>",
-            "\t\t<button class='ms-Callout-close'>",
-            "\t\t\t<i class='ms-Icon ms-Icon--x'></i>",
-            "\t\t</button>",
-            "\t\t<div id='${1:id}-inner' class='ms-Callout-inner'>", 
-            "\t\t\t<div id='${1:id}-actions' class='ms-Callout-actions'>",
-            "\t\t\t\t<a href='#' class='ms-Callout-link ms-Link ms-Link--hero'>${5:More Info}</a>",
-            "\t\t\t</div>",
-            "\t\t</div>",
-            "\t</div>",
-            "</div>"
-    ]
-}
-
-,"Fabric Callout OOBE": {
-    "prefix": "uif-calloobe",
-    "description": "OOBE-style Fabric Callout",
-    "body": [
-            "<div id='${1:id}' class='ms-Callout ms-Callout--OOBE ms-Callout--arrow${2:ArrowDirection}'>",
-            "\t<div class='ms-Callout-main'>",
-            "\t\t<div id='${1:id}-header' class='ms-Callout-header'>",
-            "\t\t\t<p id='${1:id}-title' class='ms-Callout-title'>${3:Title}</p>",
-            "\t\t</div>",
-            "\t\t<button class='ms-Callout-close'>",
-            "\t\t\t<i class='ms-Icon ms-Icon--x'></i>",
-            "\t\t</button>",
-            "\t\t<div id='${1:id}-inner' class='ms-Callout-inner'>",
-            "\t\t\t<div id='${1:id}-content' class='ms-Callout-content'>",
-            "\t\t\t\t<p id='${1:id}-subText' class='ms-Callout-subText'>${4:Body}</p>",
-            "\t\t\t</div>",
-            "\t\t\t<div id='${1:id}-actions' class='ms-Callout-actions'>",
-            "\t\t\t\t<button class='ms-Callout-button ms-Button ms-Button--primary'>",
-            "\t\t\t\t\t<span class='ms-Button-label'>${4:Button Text}</span>",
-            "\t\t\t\t</button>",
-            "\t\t\t\t<a href='#' class='ms-Callout-link ms-Link ms-Link--hero'>${5:Link}</a>",
-            "\t\t\t</div>",
-            "\t\t</div>",
-            "\t</div>",
-            "</div>"
-    ]
-}
 
 /*******************Choice Field*************************/
 ,"Fabric Checkbox": {
@@ -221,8 +455,8 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
     "description": "Fabric styled checkbox",
     "body": [
             "<div id='${1:id}' class='ms-ChoiceField'>",
-            "\t<input id='${2:id}' class='ms-ChoiceField-input' type='checkbox'>",
-            "\t<label for='id='${2:id}' class='ms-ChoiceField-field'><span class='ms-Label'>${3:Label}</span></label>",
+            "\t<input id='${1:id}_1' class='ms-ChoiceField-input' type='checkbox'>",
+            "\t<label for='${1:id}_1' class='ms-ChoiceField-field'><span class='ms-Label'>${2:Label}</span></label>",
             "</div>"
     ]
 }
@@ -232,10 +466,10 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
     "description": "Fabric styled radio button",
     "body": [
             "<div id='${1:id}' class='ms-ChoiceField'>",
-            "\t<input id='${2:id2}' class='ms-ChoiceField-input' type='radio' name='${3:group_name}'>",
-            "\t<label for='${2:id2}' class='ms-ChoiceField-field'><span class='ms-Label'>${4:Label}</span></label>",
-            "\t<input id='${5:id3}' class='ms-ChoiceField-input' type='radio' name='${3:group_name}'>",
-            "\t<label for='${5:id3}' class='ms-ChoiceField-field'><span class='ms-Label'>${6:Label}</span></label>",
+            "\t<input id='${1:id}_1' class='ms-ChoiceField-input' type='radio' name='${3:group_name}'>",
+            "\t<label for='${1:id}_1' class='ms-ChoiceField-field'><span class='ms-Label'>${4:Label}</span></label>",
+            "\t<input id='${1:id}_2' class='ms-ChoiceField-input' type='radio' name='${3:group_name}'>",
+            "\t<label for='${1:id}_2' class='ms-ChoiceField-field'><span class='ms-Label'>${5:Label}</span></label>",
             "</div>"
     ]
 }
@@ -294,13 +528,96 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
     "prefix": "uif-datePickerJS",
     "description": "Script required for Date picker component",
     "body": [
-                "<script type='text/javascript' src='scripts/PickaDate.js'></script>",
+                "<script type='text/javascript' src='fabric/picker.date.js'></script>",
                 "<script type='text/javascript'>",
                 "$(document).ready(function() {",
+                "\tvar options = {};",
                 "\tif ($.fn.DatePicker) {",
-                "\t\t$('.ms-DatePicker').DatePicker();",
+                "\t\t$('.ms-DatePicker').DatePicker(options);",
                 "\t}",
                 "});",                
+                "</script>"
+    ]
+}
+
+,"Fabric Datepicker Options": {
+    "prefix": "uif-datePickerOptions",
+    "description": "Available options for customizing the datepicker",
+    "body": [
+                "<script type='text/javascript'>",
+                "",
+                "//options documentation: http://amsul.ca/pickadate.js/date/",
+                "",
+                "var options = {",
+                "    // Strings and translations",
+                "monthsFull: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],",
+                "monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],",
+                "weekdaysFull: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],",
+                "weekdaysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],",
+                "showMonthsShort: false,",
+                "showWeekdaysFull: false,",
+                "",
+                "// Buttons",
+                "today: 'Today',",
+                "clear: 'Clear',",
+                "close: '',",
+                "",
+                "// Accessibility labels",
+                "labelMonthNext: 'Next month',",
+                "labelMonthPrev: 'Previous month',",
+                "labelMonthSelect: 'Select a month',",
+                "labelYearSelect: 'Select a year',",
+                "",
+                "// Formats - read the docs, need to take extra steps for hidden input",
+                "format: 'd mmmm, yyyy',      // format shown to user",
+                "formatSubmit: undefined,     // format submitted to server",
+                "hiddenPrefix: undefined,",
+                "hiddenSuffix: '_submit',",
+                "hiddenName: undefined,      // send only the hidden value to the server",
+                "",
+                "// Editable input",
+                "editable: undefined,  //true to allow direct editing in text field",
+                "",
+                "// Dropdown selectors",
+                "selectYears: false,",
+                "selectMonths: false,",
+                "",
+                "// First day of the week",
+                "firstDay: 1, //falsy=Sun; truthy=Mon",
+                "",
+                "// Date limits",
+                "min: [2016,2,1],  // when specified as integers, months are 0-based!",
+                "max: 50,          // +/- integers set relative to today, true=today, false=no limits",
+                "",
+                "// Disable dates",
+                "disable:[ ",
+                "     //  true                                      // Disable all *except* what follows  ",
+                "     // ,[2016,2,12], [2016,2,13]                  // Array of dates",
+                "     // ,{ from: [2016,2,15], to: [2016,2,18] }    // Range of dates (inclusive)        ",
+                "     // ,1,7                                       // Days of week",
+                "     // ,{ from: -1, to: true }                    // Relative range",
+                "     // ,[2016,2,14, 'inverted']                   // Exceptions to a range",
+                "    ],                 ",
+                "    ",
+                "",
+                "// Root picker container",
+                "container: undefined,",
+                "",
+                "// Hidden input container",
+                "containerHidden: undefined,",
+                "",
+                "// Close on a user action - don't work?",
+                "closeOnSelect: false,",
+                "closeOnClear: false,",
+                "",
+                "// Events - be careful changing these!",
+                "onStart: undefined,",
+                "onRender: undefined,",
+                "onOpen: undefined,",
+                "onClose: undefined,",
+                "onSet: undefined,",
+                "onStop: undefined,",
+                "}",
                 "</script>"
     ]
 }
@@ -315,7 +632,7 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
                 "\t<span id='${1:id}-Label' class='ms-Button-label'>${3:Open Dialog}</span>",
                 "</button>",
 
-                "<div id='${1:id}' class='ms-Dialog ms-Dialog--${1:id}'>",
+                "<div id='${1:id}' class='ms-Dialog ms-Dialog--${1:id}'>     <!-- Additional classes: ms-Dialog--lgHeader, ms-Dialog--multiline -->",
                 "\t<div id='${1:id}-overlay' class='ms-Overlay ms-Overlay--dark js-DialogAction--close'></div>",
                 "\t<div id='${1:id}-main' class='ms-Dialog-main'>",
                 "\t\t<button class='ms-Dialog-button ms-Dialog-button--close js-DialogAction--close'>",
@@ -338,98 +655,6 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
     ]
 }
 
-,"Modal Fabric Dialog": {
-    "prefix": "uif-dialogModal",
-    "description": "Markup for modal dialog, with support for open/close actions",
-    "body": [
-                "<button id='${1:id}-openBtn' class='ms-Button js-DialogAction--open' data-target='.ms-Dialog--${1:id}'>",
-                "\t<span id='${1:id}-Label' class='ms-Button-label'>${3:Open Modal Dialog}</span>",
-                "</button>",
-
-                "<div id='${1:id}' class='ms-Dialog ms-Dialog--${1:id}'>",
-                "\t<div id='${1:id}-overlay' class='ms-Overlay ms-Overlay--dark'></div>",
-                "\t<div id='${1:id}-main' class='ms-Dialog-main'>",
-                "\t\t<div id='${1:id}-header' class='ms-Dialog-header'>",
-                "\t\t\t<p class='ms-Dialog-title'>${4:Header}</p>",
-                "\t\t</div>",
-                "\t\t<div id='${1:id}-inner' class='ms-Dialog-inner'>",
-                "\t\t\t<div id='${1:id}-content' class='ms-Dialog-content'>",
-                "\t\t\t\t<p id='${1:id}-text' class='ms-Dialog-subText'>${5:Text}</p>",                
-                "\t\t\t</div>",
-                "\t\t\t<div id='${1:id}-actions' class='ms-Dialog-actions'>",
-                "\t\t\t\t<div id='${1:id}-actionsRight' class='ms-Dialog-actionsRight'>",                
-                "\t\t\t\t\t<button class='ms-Dialog-action ms-Button'>",
-                "\t\t\t\t\t\t<span class='ms-Button-label'>Close</span>",
-                "\t\t\t\t\t</button>",
-                "\t\t\t\t</div>",
-                "\t\t\t</div>",
-                "\t\t</div>",
-                "\t</div>",
-                "</div>"
-    ]
-}
-
-,"Large Header Fabric Dialog": {
-    "prefix": "uif-dialogLgHeader",
-    "description": "Markup for dialog, with a large header and support for open/close actions",
-    "body": [
-                "<button id='${1:id}-openBtn' class='ms-Button js-DialogAction--open' data-target='.ms-Dialog--${1:id}'>",
-                "\t<span id='${1:id}-Label' class='ms-Button-label'>${3:Open Large Header Dialog}</span>",
-                "</button>",
-
-                "<div id='${1:id}' class='ms-Dialog ms-Dialog--${1:id} ms-Dialog--lgHeader'>",
-                "\t<div id='${1:id}-overlay' class='ms-Overlay ms-Overlay--dark js-DialogAction--close'></div>",
-                "\t<div id='${1:id}-main' class='ms-Dialog-main'>",
-                "\t\t<button class='ms-Dialog-button ms-Dialog-button--close js-DialogAction--close'>",
-                "\t\t\t<i class='ms-Icon ms-Icon--x'></i>",
-                "\t\t</button>",
-                "\t\t<div id='${1:id}-header' class='ms-Dialog-header'>",
-                "\t\t\t<p class='ms-Dialog-title'>${4:Header}</p>",
-                "\t\t</div>",
-                "\t\t<div id='${1:id}-inner' class='ms-Dialog-inner'>",
-                "\t\t\t<div id='${1:id}-content' class='ms-Dialog-content'>",
-                "\t\t\t\t<p id='${1:id}-text' class='ms-Dialog-subText'>${5:Text}</p>",                
-                "\t\t\t</div>",
-                "\t\t\t<div id='${1:id}-actions' class='ms-Dialog-actions'>",
-                "\t\t\t\t<div id='${1:id}-actionsRight' class='ms-Dialog-actionsRight'>",                
-                "\t\t\t\t</div>",
-                "\t\t\t</div>",
-                "\t\t</div>",
-                "\t</div>",
-                "</div>"
-    ]
-}
-
-,"Multiline Fabric Dialog": {
-    "prefix": "uif-dialogMultiline",
-    "description": "Markup for multiline dialog, with support for open/close actions",
-    "body": [
-                "<button id='${1:id}-openBtn' class='ms-Button js-DialogAction--open' data-target='.ms-Dialog--${1:id}'>",
-                "\t<span id='${1:id}-Label' class='ms-Button-label'>${3:Open Multiline Dialog}</span>",
-                "</button>",
-
-                "<div id='${1:id}' class='ms-Dialog ms-Dialog--${1:id} ms-Dialog--multiline'>",
-                "\t<div id='${1:id}-overlay' class='ms-Overlay ms-Overlay--dark js-DialogAction--close'></div>",
-                "\t<div id='${1:id}-main' class='ms-Dialog-main'>",
-                "\t\t<div id='${1:id}-header' class='ms-Dialog-header'>",
-                "\t\t\t<p class='ms-Dialog-title'>${4:Header}</p>",
-                "\t\t</div>",
-                "\t\t<div id='${1:id}-inner' class='ms-Dialog-inner'>",
-                "\t\t\t<div id='${1:id}-content' class='ms-Dialog-content'>",
-                "\t\t\t\t<p id='${1:id}-text' class='ms-Dialog-subText'>${5:Line1}</p>", 
-                "\t\t\t\t<p id='${1:id}-text' class='ms-Dialog-subText'>${6:Line2}</p>", 
-                "\t\t\t\t<p id='${1:id}-text' class='ms-Dialog-subText'>${7:Line3}</p>", 
-                "\t\t\t\t<p id='${1:id}-text' class='ms-Dialog-subText'>${8:Line4}</p>",                
-                "\t\t\t</div>",
-                "\t\t\t<div id='${1:id}-actions' class='ms-Dialog-actions'>",
-                "\t\t\t\t<div id='${1:id}-actionsRight' class='ms-Dialog-actionsRight'>",                
-                "\t\t\t\t</div>",
-                "\t\t\t</div>",
-                "\t\t</div>",
-                "\t</div>",
-                "</div>"
-    ]
-}
 
 ,"Fabric Dialog JS": {
     "prefix": "uif-dialogJS",
@@ -451,23 +676,7 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
     "prefix": "uif-dropdown",
     "description": "Fabric dropdown",
     "body": [
-                "<div id='${1:id}' class='ms-Dropdown' tabindex='0'>",
-                "\t<label id='${1:id}-label' class='ms-Label'>${2:Label}</label>",
-                "\t<i class='ms-Dropdown-caretDown ms-Icon ms-Icon--caretDown'></i>",
-                "\t<select id='${1:id}-select' class='ms-Dropdown-select'>",
-                "\t\t<option>option 1</option>",
-                "\t\t<option>option 2</option>",
-                "\t\t<option>option 3</option>",
-                "\t</select>",
-                "</div>"
-    ]
-}
-
-,"Disabled Fabric Dropdown": {
-    "prefix": "uif-dropdownDisabled",
-    "description": "Disabled Fabric dropdown",
-    "body": [
-                "<div id='${1:id}' class='ms-Dropdown is-disabled' tabindex='0'>",
+                "<div id='${1:id}' class='ms-Dropdown' tabindex='0'>     <!-- Additional class: is-disabled -->",
                 "\t<label id='${1:id}-label' class='ms-Label'>${2:Label}</label>",
                 "\t<i class='ms-Dropdown-caretDown ms-Icon ms-Icon--caretDown'></i>",
                 "\t<select id='${1:id}-select' class='ms-Dropdown-select'>",
@@ -494,34 +703,33 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
 }
 
 /*******************Facepile*************************/
-/*
-2.26.2016: 2.26.2016: Needs work..
+
 
 
 ,"Fabric Facepile": {
     "prefix": "uif-facepile",
-    "description": "Markup for the opening and closing of the Facepile component - individual person details get added where specified in comments",
+    "description": "Sample markup for the Facepile component, including all child components",
     "body": [
-                "<div id='${1:id}' class='ms-Facepile'>",
+                "<div class='ms-Facepile'>",
                 "\t<button class='ms-Facepile-itemBtn ms-Facepile-itemBtn--addPerson js-addPerson'>",
                 "\t\t<i class='ms-Facepile-addPersonIcon ms-Icon ms-Icon--personAdd'></i>",
                 "\t</button>",
-                "",
                 "\t<div class='ms-Facepile-members'>",
-                "",
-                "\t\t<!--Member DIVs go here -->",
-                "\t\t<!--Use snippet uif-facePerson to insert -->",
-                "",
-                "</div>",
+                "\t\t<!-- Current members go here",
+                "			 use snippet uif-facePerson -->",
+                "\t\t",
+                "\t</div>",
                 "\t<button class='ms-Facepile-itemBtn ms-Facepile-itemBtn--overflow js-overflowPanel'>",
-                "\t\t<span class='ms-Facepile-overflowText'>+3</span>",
+                "\t\t<span class='ms-Facepile-overflowText'>(# in overflow)</span>",
                 "\t</button>",
-                "\t<div class='ms-Facepile-personaCard'>",
-                "\t\t@@include('${2:path/to/PersonaCard.html}')",
+                "\t<div class='ms-Facepile-personaCard'>\t   ",
+                "		<!-- Persona card goes here",
+                "			 use snippet uif-personaCard -->",
                 "\t</div>",
                 "</div>",
+                "",
                 "<!-- Panel -->",
-                "<div id='${1:id}-Panel' class='ms-Facepile-panel ms-Facepile-panel--addPerson ms-Panel'>",
+                "<div class='ms-Facepile-panel ms-Facepile-panel--addPerson ms-Panel'>",
                 "\t<div class='ms-Overlay ms-Overlay--dark ms-PanelAction-close'></div>",
                 "\t<div class='ms-Panel-main'>",
                 "\t\t<div class='ms-Panel-commands'>",
@@ -541,10 +749,8 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
                 "\t\t\t\t\t\t<span>Suggested contacts</span>",
                 "\t\t\t\t\t</div>",
                 "\t\t\t\t\t<ul class='ms-PeoplePicker-peopleList'>",
-                "",
-                "\t\t<!--Person result LIs go here -->",
-                "\t\t<!--Use snippet uif-PersonResult to insert -->",
-                "",
+                "\t\t\t\t\t\t<!-- PeoplePicker results go here",
+                "							 use snippet faceResult -->",
                 "\t\t\t\t\t</ul>",
                 "\t\t\t\t\t<div class='ms-PeoplePicker-searchMore js-searchMore'>",
                 "\t\t\t\t\t\t<div tabindex='0' role='button' class='ms-PeoplePicker-searchMoreBtn'>",
@@ -558,17 +764,16 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
                 "\t\t\t\t<!-- Members list -->",
                 "\t\t\t\t<div class='ms-PeoplePicker-selected is-active'>",
                 "\t\t\t\t\t<div class='ms-PeoplePicker-selectedHeader'>",
-                "\t\t\t\t\t\t<span class='ms-PeoplePicker-selectedCount'>3 members</span>",
+                "\t\t\t\t\t\t<span class='ms-PeoplePicker-selectedCount'>(Count)</span> member<span>s</span>",
                 "\t\t\t\t\t</div>",
                 "\t\t\t\t\t<ul class='ms-PeoplePicker-selectedPeople'>",
-                "",
-                "\t\t<!--Selected person LIs go here -->",
-                "\t\t<!--Use snippet uif-facePersonSelected to insert -->",
-                "",
+                "\t\t\t\t\t\t<!-- Selected people go here",
+                "							 use snippet uif-facePersonSelected -->",
                 "\t\t\t\t\t</ul>",
                 "\t\t\t\t</div>",
                 "\t\t\t\t<div class='ms-PeoplePicker-personaCard'>",
-                "\t\t\t\t\t@@include('${2:path/to/PersonaCard.html}')",
+                "\t\t\t\t\t<!-- Persona card goes here",
+                "						 use snippet uif-personaCard -->",
                 "\t\t\t\t</div>",
                 "\t\t\t</div>",
                 "\t\t</div>",
@@ -584,13 +789,13 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
                 "<div id='${1:id}-person' tabindex='0' role='button' class='ms-Facepile-itemBtn ms-Facepile-itemBtn--member' title='${2:Name}'>",
                 "\t\t\t<div class='ms-Persona ms-Persona--xs'>",
                 "\t\t\t\t<div class='ms-Persona-imageArea'>",
-                "\t\t\t\t\t<div class='ms-Persona-initials ms-Persona-initials--blue'>${3:Initials}</div>",
-                "\t\t\t\t\t<img class='ms-Persona-image' src='${4:Image source}' alt='Persona image'>",
+                "\t\t\t\t\t<div class='ms-Persona-initials ms-Persona-initials--blue'>${3:DM}</div>",
+                "\t\t\t\t\t<img class='ms-Persona-image' src='' alt='Persona image'>",
                 "\t\t\t\t</div>",
                 "\t\t\t\t<div class='ms-Persona-presence'></div>",
                 "\t\t\t\t<div class='ms-Persona-details'>",
-                "\t\t\t\t\t<div class='ms-Persona-primaryText'>${2:Name}</div>",
-                "\t\t\t\t\t<div class='ms-Persona-secondaryText'>${5:Person Title}</div>",
+                "\t\t\t\t\t<div class='ms-Persona-primaryText'>${2:David Mann}</div>",
+                "\t\t\t\t\t<div class='ms-Persona-secondaryText'>${5:Title}</div>",
                 "\t\t\t\t</div>",
                 "\t\t\t</div>",
                 "\t\t</div>"
@@ -598,15 +803,15 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
 }
 
 ,"Fabric People Picker Result": {
-    "prefix": "uif-personResult",
-    "description": "An individual person's information for display in search results",
+    "prefix": "uif-faceResult",
+    "description": "An individual person's information for display in Facepile search results",
     "body": [
                 "<li id='${1:id}-result' class='ms-PeoplePicker-peopleListItem ms-PeoplePicker-result'>",
                 "\t<div tabindex='0' role='button' class='ms-PeoplePicker-peopleListBtn'>",
                 "\t\t<div class='ms-Persona ms-Persona--selectable ms-Persona--sm'>",
                 "\t\t\t<div class='ms-Persona-imageArea'>",
                 "\t\t\t\t<div class='ms-Persona-initials ms-Persona-initials--${2:darkBlue}'>${3:DM}</div>",
-                "\t\t\t\t<img class='ms-Persona-image' src='${4:path/to/Image}' alt='Persona image'>",
+                "\t\t\t\t<img class='ms-Persona-image' src='' alt='Persona image'>",
                 "\t\t\t</div>",
                 "\t\t\t<div class='ms-Persona-presence'></div>",
                 "\t\t\t<div class='ms-Persona-details'>",
@@ -628,7 +833,7 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
                 "\t<div class='ms-Persona ms-Persona--sm'>",
                 "\t\t<div class='ms-Persona-imageArea'>",
                 "\t\t\t<div class='ms-Persona-initials ms-Persona-initials--${2:darkBlue}'>${3:DM}</div>",
-                "\t\t\t<img class='ms-Persona-image' src='${4:path/to/Image}' alt='Persona image'>",
+                "\t\t\t<img class='ms-Persona-image' src='' alt='Persona image'>",
                 "\t\t</div>",
                 "\t\t<div class='ms-Persona-presence'></div>",
                 "\t\t<div class='ms-Persona-details'>",
@@ -651,45 +856,28 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
                 "\tif ($.fn.Facepile) {",
                 "\t\t$('.ms-Facepile').Facepile();",
                 "\t}",
+                "\tif ($.fn.PersonaCard) {",
+                "\t\t$('.ms-PersonaCard').PersonaCard();",
+                "\t}",
                 "});",                
                 "</script>"
     ]
 }
 
-End Facepile
-*/
+
 
 /*******************Label*************************/
 
 ,"Fabric Label": {
     "prefix": "uif-label",
-    "description": "Basic Label",
+    "description": "Label for fields",
     "body": [
-                "<label id='${1:id}' class='ms-Label'>",
+                "<label id='${1:id}' class='ms-Label'>  <!-- Additional classes: is-required is-disabled  -->",
                 "\tLabel Text",
                 "</label>"
     ]
 }
 
-,"Fabric Label Required": {
-    "prefix": "uif-labelRequired",
-    "description": "Label for required field",
-    "body": [
-                "<label id='${1:id}' class='ms-Label is-required'>",
-                "\tLabel Text",
-                "</label>"
-    ]
-}
-
-,"Fabric Label Disabled": {
-    "prefix": "uif-labelDisabled",
-    "description": "Label for disabled field",
-    "body": [
-                "<label id='${1:id}' class='ms-Label is-disabled'>",
-                "\tLabel Text",
-                "</label>"
-    ]
-}
 
 /*******************Link*************************/
 
@@ -775,9 +963,22 @@ End Facepile
                 "\t$(function(){",
                 "\t\tif ($.fn.CommandBar) {",
                 "\t\t\t$('.ms-CommandBar').CommandBar();",
+                "\t\t}",
                 "\t})",
                 "</script>"
 
+    ]
+}
+
+,"Command Bar Context Menu JS": {
+    "prefix": "jsCommandBarCtx",
+    "description": "",
+    "body": [
+                "<script type='text/javascript'>",
+                "function showMenu(id, x){",
+                "\t$('#' + id + 'CtxMenu').addClass('is-open').css('position','absolute').css('left',event.clientX + 'px');",
+                "}",
+                "</script>"
     ]
 }
 
@@ -824,24 +1025,15 @@ End Facepile
 ,"Fabric List": {
     "prefix": "uif-list",
     "description": "Shell for a Fabric List.  Items are placed as indicated in comments",
-    "body": [
-                "<ul id='${1:id}' class='ms-List'>",
+    "body": [                
+                "<ul id='${1:id}' class='ms-List'>     <!-- Additional class: ms-List--grid   -->",
                 "<!-- Individual List Items go here-->",
                 "<!-- Use snippet uif-listItem -->",
                 "</ul>"
     ]
 }
 
-,"Fabric Grid": {
-    "prefix": "uif-grid",
-    "description": "Shell for a Fabric List displayed as a Grid.  Items are placed as indicated in comments",
-    "body": [
-                "<ul id='${1:id}' class='ms-List ms-List--grid'>",
-                "\t<!-- Individual List Items go here-->",
-                "\t<!-- Use snippet uif-listItem -->",
-                "</ul>"
-    ]
-}
+
 
 /*******************ListItem*************************/
 
@@ -856,9 +1048,23 @@ End Facepile
                 "\t<span class='ms-ListItem-metaText'>${5:Meta Text}</span>",
                 "\t<div class='ms-ListItem-selectionTarget js-toggleSelection'></div>",
                 "\t<div class='ms-ListItem-actions'>",
-                "\t\t<div class='ms-ListItem-action'><a href='${6:URL}'><i class='ms-Icon ms-Icon--${7:Icon}'></i></a></div>",                
+                "\t\t<div class='ms-ListItem-action'><i class='ms-Icon ms-Icon--${6:Icon}'></i></div>",                
                 "\t</div>",
                 "</li>"
+    ]
+}
+
+,"Fabric ListItem JS": {
+    "prefix": "uif-listItemJS",
+    "description": "JavaScript required to enable 'selectable'",
+    "body": [
+                "<script type='text/javascript'>",
+                "$(document).ready(function() {",
+                "\tif ($.fn.ListItem) {",
+                "\t\t$('.ms-ListItem').ListItem();",
+                "\t}",
+                "});",
+                "</script>"
     ]
 }
 
@@ -872,7 +1078,7 @@ End Facepile
     ]
 }
 
-/******************* MessageBar *************************/
+/******************* MessageBanner *************************/
 
 ,"Fabric Message Banner": {
     "prefix": "uif-messageBanner",
@@ -913,10 +1119,8 @@ End Facepile
                 "function showBanner(id){",
                 "\tif (typeof fabric !== 'undefined') {",
                 "\t\tif ('MessageBanner' in fabric) {",
-                "\t\t\tvar elements = document.querySelectorAll('#' + id);",
-                "\t\t\tvar i = elements.length;",
-                "\t\t\tvar component;",
-                "\t\t\tcomponent = new fabric['MessageBanner'](elements[0]);",
+                "\t\t\tvar elm = document.getElementById(id);",
+                "\t\t\tvar component = new fabric['MessageBanner'](elm);",
                 "\t\t\tcomponent.showBanner();",
                 "\t\t}",
                 "\t}",
@@ -1000,7 +1204,7 @@ End Facepile
                 "\t\t<div class='ms-Persona'>",
                 "\t\t\t<div class='ms-Persona-imageArea ms-bgColor-blue'>",
                 "\t\t\t\t<i class='ms-Persona-placeholder ms-Icon ms-Icon--person'></i>",
-                "\t\t\t\t\t<img class='ms-Persona-image' src='${1:path/to/image}'>",
+                "\t\t\t\t\t<img class='ms-Persona-image' src=''>",
                 "\t\t\t</div>",
                 "\t\t\t<div class='ms-Persona-presence'></div>",
                 "\t\t\t<div class='ms-Persona-details'>",
@@ -1116,55 +1320,79 @@ End Facepile
 }
 
 /******************* Persona Card *************************/
-/*
 
-2.26.2016: Needs work
 
-// Org Chart Elements removed temporarily  -->
-,"snippet name": {
+
+,"Fabric Persona Card": {
     "prefix": "uif-personaCard",
     "description": "Details of an individual presented in a card format",
     "body": [
-                "<div id='${1:id}' class='ms-PersonaCard'>     <!-- Optional class: ms-PersonaCard--square     -->",
-                "\t<div class='ms-Persona ms-Persona--xl'>",
-                "\t\t<div class='ms-Persona-imageArea'>",
-                "\t\t\t<div class='ms-Persona-initials ms-Persona-initials--blue'>${2:DM}</div>",
-                "\t\t\t<img class='ms-Persona-image' src='${3:path/ti/image}'>",
-                "\t\t</div>",
-                "\t\t<div class='ms-Persona-presence'></div>",
-                "\t\t<div class='ms-Persona-details'>",
-                "\t\t\t<div class='ms-Persona-primaryText' title='${4:Name}'>${4:David Mann}</div>",
-                "\t\t\t<div class='ms-Persona-secondaryText'>${5:Text}</div>",
-                "\t\t\t<div class='ms-Persona-tertiaryText'>${6:Text}</div>",
-                "\t\t\t<div class='ms-Persona-optionalText'>${7:Text}</div>",
+                "<div class='ms-PersonaCard'>",
+                "\t<div class='ms-PersonaCard-persona'>",
+                "\t\t<div class='ms-Persona ms-Persona--xl'>",
+                "\t\t\t<div class='ms-Persona-imageArea'>",
+                "\t\t\t\t<div class='ms-Persona-initials ms-Persona-initials--blue'>DM</div>",
+                "\t\t\t\t<img class='ms-Persona-image' src='' />",
+                "\t\t\t</div>",
+                "\t\t\t<div class='ms-Persona-presence'></div>",
+                "\t\t\t<div class='ms-Persona-details'>",
+                "\t\t\t\t<div class='ms-Persona-primaryText' title='David Mann'>David Mann</div>",
+                "\t\t\t\t<div class='ms-Persona-secondaryText'>Grand Poobah, Sector43 Software</div>",
+                "\t\t\t\t<div class='ms-Persona-tertiaryText'>Office: 2468</div>",
+                "\t\t\t\t<div class='ms-Persona-optionalText'>Available until 4 PM</div>",
+                "\t\t\t</div>",
                 "\t\t</div>",
                 "\t</div>",
-                "</div>",
-                "<ul class='ms-PersonaCard-actions'>",
-                "\t<li id='${19:Action1_id}' class='ms-PersonaCard-action is-active'><i class='ms-Icon ms-Icon--${8:chat}'></i></li>",
-                "\t<li id='${20:Action2_id}' class='ms-PersonaCard-action'><i class='ms-Icon ms-Icon--${9:phone}'></i></li>",                
-                "\t<li id='${23:Action3_id}' class='ms-PersonaCard-overflow' alt='${10:Text}' title='${11:Text}'>${12:Text}</li>",                
-                "</ul>",
-                "<div class='ms-PersonaCard-actionDetailBox'>",
-                "\t<ul id='detailList' class='ms-PersonaCard-detailChat'>",
-                "\t\t<li id='${19:Action1_id}-details' class='ms-PersonaCard-actionDetails detail-1'>",
-                "\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>${13:Action1 Label}:</span> ${14:Action1 Markup}</div>",
-                "\t\t</li>",
-                "\t\t<li id='${20:Action2_id}-details' class='ms-PersonaCard-actionDetails detail-2'>",
-                "\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>${15:Action2 Label}:</span>${16:Action2 Markup}</div>",
-                "\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>${17:Action2 Label2}:</span>${18:Action2 Markup}</div>",
-                "\t\t</li>",
-                "\t\t<li id='${23:Action3_id}-details' class='ms-PersonaCard-actionDetails detail-3'>",
-                "\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>${21:Action3 Label}:</span> ${22:Action3 Markup}</div>",
-                "\t\t</li>",                
+                "\t<ul class='ms-PersonaCard-actions'>",
+                "\t\t<li id='chat' class='ms-PersonaCard-action is-active'><i class='ms-Icon ms-Icon--chat'></i></li>",
+                "\t\t<li id='phone' class='ms-PersonaCard-action'><i class='ms-Icon ms-Icon--phone'></i></li>",
+                "\t\t<li id='video' class='ms-PersonaCard-action'><i class='ms-Icon ms-Icon--video'></i></li>",
+                "\t\t<li id='mail' class='ms-PersonaCard-action'><i class='ms-Icon ms-Icon--mail'></i></li>",
+                "\t\t<li class='ms-PersonaCard-overflow' alt='View profile in Delve' title='View profile in Delve'>View profile</li>",
+                "\t\t<li id='org' class='ms-PersonaCard-action ms-PersonaCard-orgChart'><i class='ms-Icon ms-Icon--org'></i></li>",
                 "\t</ul>",
+                "\t<div class='ms-PersonaCard-actionDetailBox'>",
+                "\t\t<ul id='detailList' class='ms-PersonaCard-detailChat'>",
+                "\t\t\t<li id='chat' class='ms-PersonaCard-actionDetails detail-1'>",
+                "\t\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Lync:</span> <a class='ms-Link' href='#'>Start Lync call</a></div>",
+                "\t\t\t</li>",
+                "\t\t\t<li id='phone' class='ms-PersonaCard-actionDetails detail-2'>",
+                "\t\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Personal:</span> 610-555-1234</div>",
+                "\t\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Work:</span> 610-555-5678</div>",
+                "\t\t\t</li>",
+                "\t\t\t<li id='video' class='ms-PersonaCard-actionDetails detail-3'>",
+                "\t\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Skype:</span> <a class='ms-Link' href='#'>Start Skype call</a></div>",
+                "\t\t\t</li>",
+                "\t\t\t<li id='mail' class='ms-PersonaCard-actionDetails detail-4'>",
+                "\t\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Personal:</span> <a class='ms-Link' href='mailto:someone@outlook.com'>someone@outlook.com</a></div>",
+                "\t\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Work:</span> <a class='ms-Link' href='mailto:someoneelse@outlook.com'>someoneelse@outlook.com</a></div>",
+                "\t\t\t</li>",
+                "\t\t\t<!-- org chart -->",
+                "\t\t\t<li id='org' class='ms-PersonaCard-actionDetails detail-5'>",
+                "\t\t\t\t <!--\tOrg Chart, use snippet uif-orgChart -->\t\t\t\t\t",
+                "\t\t\t</li>",
+                "\t\t\t<!-- /org chart -->",
+                "\t\t</ul>",
+                "\t</div>",
                 "</div>"
     ]
 }
 
+,"Fabric PersonaCard JS": {
+    "prefix": "uif-personaCardJS",
+    "description": "Script required for PersonaCard component",
+    "body": [
+                "<script type='text/javascript'>",               
+                "\t$(document).ready(function() {",
+                "\t\tif ($.fn.PersonaCard) {",
+                "\t\t\t$('.ms-PersonaCard').PersonaCard();",
+                "\t\t\t}",
+                "\t});",
+                "</script>"                    
+    ]
+}
 
-End Persona Card
-*/
+
 
 /******************* Pivot *************************/
 
@@ -1186,7 +1414,7 @@ End Persona Card
     "prefix": "uif-pivotItem",
     "description": "An individual item in a Pivot",
     "body": [
-                "\t<li class='ms-Pivot-link'>${1:Text}</li>     <!-- Optional class: is-selected     -->"                
+                "<li class='ms-Pivot-link'>${1:Text}</li>     <!-- Optional class: is-selected     -->"                
     ]
 }
 
@@ -1218,10 +1446,7 @@ End Persona Card
                 "\t\t<div class='ms-ProgressIndicator-progressBar'></div>",
                 "\t</div>",
                 "\t<div class='ms-ProgressIndicator-itemDescription'>${3: Description}</div>",
-                "</div>",
-                "<button id='${1:id}-btn' class='ms-Button' onClick=\"setProgress('.25')\">",
-                "\t<span id='id-btnlabel' class='ms-Button-label' >Set Progress</span>",
-                "</button> "
+                "</div>"
     ]
 }
 
@@ -1231,20 +1456,15 @@ End Persona Card
     "body": [
                "<script type='text/javascript'>",
                 "var component;",
-                "function initProgress(){",
+                "function initProgress(id){",
                 "if (typeof fabric !== 'undefined') {",
                 "\tif ('ProgressIndicator' in fabric) {",
-                "\t\tvar elements = document.querySelectorAll('#id');",
-                "\t\tcomponent = new fabric['ProgressIndicator'](elements[0]);",
+                "\t\tvar elm = document.getElementById(id);",
+                "\t\tcomponent = new fabric['ProgressIndicator'](elm);",
                 "\t\t}",
                 "\t}",
-                "}",                
-                "function setProgress(percent){",
-                "\tif (typeof component !== 'undefined') {",
-                "\t\tcomponent.setProgressPercent(percent);",
-                "\t}",
                 "}",
-                "$(initProgress);",           
+                "$(function(){initProgress('id');});",                                         
                 "</script>"
     ]
 }
@@ -1293,18 +1513,15 @@ End Persona Card
     "description": "Script required for Spinner component",
     "body": [
                "<script type='text/javascript'>",
-                "$(document).ready(function() {",
-                "\tif (typeof fabric !== 'undefined') {",
-                "\t\tif ('Spinner' in fabric) {",
-                "\t\t\tvar elements = document.querySelectorAll('.ms-Spinner');",
-                "\t\t\tvar i = elements.length;",
-                "\t\t\tvar component;",
-                "\t\t\twhile(i--) {",
-                "\t\t\t\tcomponent = new fabric['Spinner'](elements[i]);",
-                "\t\t\t}",
-                "\t\t}",
-                "\t}",
-                "});",                
+               "function startSpinner(id, text){",
+               "\tif(typeof text === 'string'){",
+               "\t\tvar label = $('#' + id).children('div.ms-Spinner-label')[0];",
+               "\t\t$(label).text(text);",
+               "\t}",
+               "\tvar elm = document.getElementById(id);",
+               "\tvar component = new fabric['Spinner'](elm);",
+               "\telm.style.display = 'block';",
+               "}",              
                 "</script>"
     ]
 }
@@ -1414,14 +1631,152 @@ End Persona Card
 }
 
 /******************* Persona *************************/
-//TBD
+,"Fabric Persona": {
+    "prefix": "uif-persona",
+    "description": "A responsive control for showing user information",
+    "body": [
+                "<div class='ms-Persona'>     <!-- Additional classes: ms-Persona--square, ms-Persona--tiny, ms-Persona--xs, ms-Persona--sm, ms-Persona--lg, ms-Persona--xl  -->",
+                "\t<div class='ms-Persona-imageArea'>",
+                "\t\t<div class='ms-Persona-initials ms-Persona-initials--blue'>DM</div>",
+                "\t\t<img class='ms-Persona-image' src=''>",
+                "\t</div>",
+                "\t<div class='ms-Persona-presence'></div>",
+                "\t<div class='ms-Persona-details'>",
+                "\t\t<div class='ms-Persona-primaryText'>David Mann</div>",
+                "\t\t<div class='ms-Persona-secondaryText'>Secondary Text</div>",
+                "\t\t<div class='ms-Persona-tertiaryText'>Tertiary Text</div>",
+                "\t\t<div class='ms-Persona-optionalText'>Optional Text</div>",
+                "\t</div>",
+                "</div>"
+    ]
+}
 
 /******************* People Picker *************************/
-// TBD
+,"Fabric PeoplePicker": {
+    "prefix": "uif-peoplePicker",
+    "description": "Sample markup for the PeoplePicker component",
+    "body": [
+                "<div class='ms-PeoplePicker'>",
+                "\t<div class='ms-PeoplePicker-searchBox'>",
+                "\t\t<input class='ms-PeoplePicker-searchField' type='text'>",
+                "\t</div>",
+                "\t<div class='ms-PeoplePicker-results'>",
+                "\t\t<div class='ms-PeoplePicker-resultGroups'>",
+                "\t\t\t<div class='ms-PeoplePicker-resultGroup'>",
+                "\t\t\t\t<div class='ms-PeoplePicker-resultGroupTitle'>Group Heading</div>",
+                "\t\t\t\t<ul class='ms-PeoplePicker-resultList'>",
+                "\t\t\t\t\t <!-- Results go here.  Use uif-peoplePickerResult snippet --> ",                
+                "\t\t\t\t</ul>",
+                "\t\t\t</div>",
+                "\t\t</div>",
+                "\t\t<div class='ms-PeoplePicker-searchMore js-searchMore'>",
+                "\t\t\t<button class='ms-PeoplePicker-searchMoreBtn'>",
+                "\t\t\t\t<div class='ms-PeoplePicker-searchMoreIcon'>",
+                "\t\t\t\t\t<i class='ms-Icon ms-Icon--search'></i>",
+                "\t\t\t\t</div>",
+                "\t\t\t\t<div class='ms-PeoplePicker-searchMoreSecondary'>Showing top n results</div>",
+                "\t\t\t\t<div class='ms-PeoplePicker-searchMorePrimary'>Search Contacts &amp; Directory</div>",
+                "\t\t\t</button>",
+                "\t\t</div>",
+                "\t</div>",
+                "</div>"
+
+    ]
+}
+
+,"Fabric PeoplePicker Result": {
+    "prefix": "uif-peoplePickerResult",
+    "description": "A single person result for the PeoplePicker",
+    "body": [
+                "<li class='ms-PeoplePicker-result'>",
+                "\t<div tabindex='0' role='button' class='ms-PeoplePicker-resultBtn'>",
+                "\t\t<div class='ms-Persona ms-Persona--square'>     <!-- Additional classes: ms-Persona--[available|busy|away|blocked|offline]  -->",
+                "\t\t\t<div class='ms-Persona-imageArea'>",
+                "\t\t\t\t<i class='ms-Persona-placeholder ms-Icon ms-Icon--person'></i>",
+                "\t\t\t\t<img class='ms-Persona-image' src=''>",
+                "\t\t\t</div>",
+                "\t\t\t<div class='ms-Persona-presence'></div>",
+                "\t\t\t<div class='ms-Persona-details'>",
+                "\t\t\t\t<div class='ms-Persona-primaryText'>Name</div>",
+                "\t\t\t\t<div class='ms-Persona-secondaryText'>Dept</div>",
+                "\t\t\t</div>",
+                "\t\t\t<button class='ms-PeoplePicker-resultAction js-resultRemove'><i class='ms-Icon ms-Icon--x'></i></button>",                
+                "\t\t</div>",
+                "\t</div>",
+                "</li>"
+    ]
+}
+
+
+,"Fabric PeoplePicker JS": {
+    "prefix": "uif-peoplePickerJS",
+    "description": "JavaScript to initialize PeoplePicker",
+    "body": [
+                "<script type='text/javascript'>",
+                "$(document).ready(function() {",
+                "\tif ($.fn.PeoplePicker) {",
+                "\t\t$('.ms-PeoplePicker').PeoplePicker();",
+                "\t}",
+                "});",                
+                "</script>"
+    ]
+}
+
+/******************* Grid *************************/
+
+,"Fabric Grid Shell": {
+    "prefix": "uif-gridShell",
+    "description": "",
+    "body": [
+                "<div class='ms-Grid'>", 
+                "\t\t<!-- Grid rows go here, use snippet uif-gridRow  -->",
+                "</div>"
+    ]
+}
+
+
+,"Fabric Grid Row": {
+    "prefix": "uif-gridRow",
+    "description": "An individual row in the Fabric grid",
+    "body": [
+                "\t<div class='ms-Grid-row'>",
+                "\t\t<!-- Grid columns go here, use snippet uif-gridCol  -->",
+                "\t</div>"
+    ]
+}
+
+,"Fabric Grid Column": {
+    "prefix": "uif-gridCol",
+    "description": "An individual column in the Fabric grid",
+    "body": [
+                "\t<div class='ms-Grid-col '>Text</div>   "
+    ]
+}
+
+,"Fabric Grid Row Classes": {
+    "prefix": "uif-gridClasses",
+    "description": "Inserts a cheatsheet of grid styles as a comment",
+    "body": [
+                "<!--",
+                "Sizes:             sm < 480; md 480-639; lg 640-1023; xl 1024-1365; xxl 1366-1919; xxxl 1920+",
+                "",
+                "Size classes:      ms-u-sm*, ms-u-md*, ms-u.lg*, ms-u.xl*, ms-u.xxl*, ms-u-xxxl* (* is # of columns, 1-12)",
+                "",
+                "Hidden Classes:    ms-u-hidden* (* is a size: Sm, Md, Lg, Xl, Xxl, Xxxl    <-- Note capitalization)",
+                "                   ms-u-hiddenMdDown, ms-u-hiddenLgDown, ms-u-hiddenXlDown, ms-u-hiddenXxlDown    <-- Note capitalization",
+                "                   ms-u-hiddenMdUp, ms-u-hiddenLgUp, ms-u-hiddenXlUp, ms-u-hiddenXxlUp    <-- Note capitalization",
+                "",
+                "Push/Pull Classes: ms-u-*Push**, ms-u-*Pull**  (* is a size: sm, md, lg, xl, xxl, xxxl.  ** is # of columns, 1-12)",
+                "                   ms-u-*Push0,  ms-u-*Pull0  (resets push/pull. * is a size: sm, md, lg, xl, xxl, xxxl.)",
+                "",
+                "Offset Classes:    ms-u-*Offset**  (* is a size: sm, md, lg, xl, xxl, xxxl.  ** is # of columns, 1-12)",
+                "                   ms-u-*Offset0  (resets Offset. * is a size: sm, md, lg, xl, xxl, xxxl.)",
+                "-->"
+    ]
+}
 
 
 
 }
-
 
 
