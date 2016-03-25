@@ -6,7 +6,7 @@
 
 **Provided By**: Sector 43 Software (David Mann)
 
-**Details**: [s43.io/FabricSnippets](http://s43.io/FabricSnippets)
+
 
 **Based on**: Fabric release 2.01 (Feb 5, 2016)
 
@@ -57,6 +57,11 @@ Installation and usage is shown in the short video here: [https://youtu.be/VsfUT
 
 ## Known Issues ##
 - None
+
+## Next Steps ##
+
+- Updating for latest Fabric release (currently 2.2.0)
+- Creating Visual Studio snippets
 
 Please report other issues here: [https://github.com/Sector43/FabricSnippets/issues](https://github.com/Sector43/FabricSnippets/issues)
 
