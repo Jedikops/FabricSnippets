@@ -58,10 +58,12 @@ Installation and usage is shown in the short video here: [https://youtu.be/VsfUT
 ## Known Issues ##
 - None
 
-## Next Steps ##
+## Generating Visual Studio Snippets ##
+Paul Schaeflein contributed a small console application that will generate a Visual Studio .snippet file for each snippet in the VSCode snippet file.  It doesn't handle replaceable parameters but it gets most of the drudgery work done.
 
+## Next Steps ##
 - Updating for latest Fabric release (currently 2.2.0)
-- Creating Visual Studio snippets
+- Creating Visual Studio snippets - see note above
 
 Please report other issues here: [https://github.com/Sector43/FabricSnippets/issues](https://github.com/Sector43/FabricSnippets/issues)
 
