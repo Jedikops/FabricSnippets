@@ -30,14 +30,11 @@ All HTML, JavaScript, CSS (c) Microsoft.  Adapted from GitHub source files.
 /*******************CDN References*************************/
 ,"CDN References": {
     "prefix": "uifCdn",
-    "description": "Add Fabric CSS CDN link tags and local JS script tag",
+    "description": "Add Fabric CSS CDN link and JS script tag",
     "body": [
-            "<link rel='stylesheet' href='http://appsforoffice.microsoft.com/fabric/fabric-core/4.1.0/fabric.min.css'>",
-            "<link rel='stylesheet' href='https://appsforoffice.microsoft.com/fabric/fabric-js/1.0.0/fabric.components.min.css'>",
-			"",
-			"<script type='text/javascript' src='fabric/fabric.min.js' ></script>",
-			"<script type='text/javascript' src='fabric/fabric.templates.js' ></script>",
-                "<!-- *** Correct above paths as necessary for your app ***  -->"
+            "<link rel='stylesheet' href='http://appsforoffice.microsoft.com/fabric/fabric-core/4.1.0/fabric.min.css'>",    
+            "<link rel='stylesheet' href='https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/css/fabric.components.min.css'>",
+            "<script src='https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/js/fabric.min.js'></script>"
     ]
 }
 
