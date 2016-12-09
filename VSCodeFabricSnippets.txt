@@ -16,285 +16,56 @@
     ]
 }
 
-,"JS Sample for People Picker Interactivity": {
-    "prefix": "jsAddPeoplePickerResult",
-    "description": "",
-    "body": [
-                "<button id='id' class='ms-Button'>",
-                "    <span id='id-label' class='ms-Button-label' onclick='addPPResult()'>Add User Result</span>",
-                "</button>",
-                "<button id='id' class='ms-Button'>",
-                "    <span id='id-label' class='ms-Button-label' onclick='getPPSelected()'>Get Selected Users</span>",
-                "</button>",
-                "<button id='id' class='ms-Button'>",
-                "    <span id='id-label' class='ms-Button-label' onclick='removePPResult()'>Remove User Result</span>",
-                "</button>",
-                "<script type='text/javascript'>",
-                "function addPPResult(){",
-                "    var resultHtml = \"<li id='user2' class='ms-PeoplePicker-result'> \" + ",
-                "        \"<div tabindex='0' role='button' class='ms-PeoplePicker-resultBtn'> \" + ",
-                "    		\"<div class='ms-Persona ms-Persona--square'> \" + ",
-                "    		 \"<div class='ms-Persona-imageArea'> \" + ",
-                "    			 \"<i class='ms-Persona-placeholder ms-Icon ms-Icon--person'></i> \" + ",
-                "    			 \"<img class='ms-Persona-image' src=''> \" + ",
-                "    		 \"</div> \" + ",
-                "    		 \"<div class='ms-Persona-presence'></div> \" + ",
-                "    		 \"<div class='ms-Persona-details'> \" + ",
-                "    			 \"<div class='ms-Persona-primaryText'>User2</div> \" + ",
-                "    			 \"<div class='ms-Persona-secondaryText'>Dept2</div> \" + ",
-                "    		 \"</div> \" + ",
-                "    		 \"<button class='ms-PeoplePicker-resultAction js-resultRemove'><i class='ms-Icon ms-Icon--x'></i></button> \" + ",
-                "    		\"</div> \" + ",
-                "        \"</div> \" + ",
-                "    \"</li>\";",
-                "    var resultList = $('ul.ms-PeoplePicker-resultList')[0]",
-                "    $(resultList).append(resultHtml);",
-                "}",
-                "function removePPResult(){",
-                "    $('.ms-PeoplePicker-resultList').find('.ms-Persona-primaryText:contains(\"User2\")').each(",
-                "        function( index, value ) {",
-                "            $(value).closest('li').remove();",
-                "        });",
-                "}",
-
-                "function getPPSelected(){",
-                "$('.ms-PeoplePicker-searchBox').find('.ms-Persona-primaryText').each(",
-                "    function( index, value ) {",
-                "      alert( $(value).text() );",
-                "    });",
-                "}",
-                "</script>"
-
-    ]
-}
-
-,"Grid Reference Row": {
-    "prefix": "gridRefRow",
-    "description": "",
-    "body": [
-                "<div class='ms-Grid-row'>",
-                "    <div class='ms-Grid-col ms-u-sm1 refCol'>1</div>",
-                "    <div class='ms-Grid-col ms-u-sm1 refCol'>2</div>", 
-                "    <div class='ms-Grid-col ms-u-sm1 refCol'>3</div>", 
-                "    <div class='ms-Grid-col ms-u-sm1 refCol'>4</div>", 
-                "    <div class='ms-Grid-col ms-u-sm1 refCol'>5</div>", 
-                "    <div class='ms-Grid-col ms-u-sm1 refCol'>6</div>", 
-                "    <div class='ms-Grid-col ms-u-sm1 refCol'>7</div>", 
-                "    <div class='ms-Grid-col ms-u-sm1 refCol'>8</div>", 
-                "    <div class='ms-Grid-col ms-u-sm1 refCol'>9</div>", 
-                "    <div class='ms-Grid-col ms-u-sm1 refCol'>10</div>", 
-                "    <div class='ms-Grid-col ms-u-sm1 refCol'>11</div>", 
-                "    <div class='ms-Grid-col ms-u-sm1 refCol'>12</div>",
-                "</div>",
-                "<hr /><br />" 
-    ]
-}
-
-,"Grid Demo Style Override": {
-    "prefix": "gridDemoStyle",
-    "description": "",
-    "body": [
-                "<style type='text/css'>",
-                ".ms-Grid-col{",
-                "    border:1px solid black;",
-                "}",
-                ".header, .footer{",
-                "    background-color:gray;",   
-                "}",
-                "</style>"
-    ]
-}
-
-,"Grid Demo Row": {
-    "prefix": "gridDemoRows",
-    "description": "Inserts markup for grid demo",
-    "body": [
-                "<div class='ms-Grid-row'> ",
-                "	<div class='ms-Grid-col ms-u-sm12 header'>Header</div>  ",
-                "</div> ",
-                "<div class='ms-Grid-row'> ",
-                "    <div class='ms-Grid-col'>Left Bar</div>          ",
-                "    <div class='ms-Grid-col'></div>",
-                "    <div class='ms-Grid-col'>Right Bar</div>",
-                "</div>",
-                "<div class='ms-Grid-row'> ",
-                "	<div class='ms-Grid-col ms-u-sm12 footer'>Footer</div>  ",
-                "</div>"
-    ]
-}
-
-,"Callout Positioning Markup": {
-    "prefix": "callOutPositioning",
-    "description": "Inserts markup for callout positioning demo",
-    "body": [
-                "<style type='text/css'>",
-                "\t.ms-Callout{",
-                "\t display:none;",
-                "\t margin-top:-60px;",
-                "\t left:15px;",
-                "\t}",
-                "\t",
-                "\t#clickMe{",
-                "\t padding-top:100px;",
-                "\t}",
-                "</style>",
-                "<i id='clickMe' class='ms-Icon ms-Icon--alert' onclick='showCallout()'></i>"
-    ]
-}
-
-,"Callout Positioning JS": {
-    "prefix": "callOutPositioningJS",
-    "description": "Inserts script for callout positioning demo",
-    "body": [
-                "<script>",
-                "\tfunction showCallout(){",
-                "\t\t$('.ms-Callout').show();",
-                "\t\t",
-                "\t}",
-                "</script>"
-    ]
-}
-
-,"Spinner Demo Markup": {
-    "prefix": "spinnerDemo",
-    "description": "",
-    "body": [
-                "<style>",
-                "\t.ms-Spinner{",
-                "\t\tdisplay:none;",
-                "\t}",
-                "</style>",
-                "<button class='ms-Button'>",
-                "    <span id='id-label' class='ms-Button-label' onclick='startSpinner(\"id\", \"Loading Demo Spinner...\")'>Start Spinner</span>",
-                "</button>",
-                "<hr />"
-    ]
-}
-
-,"CommandBar Demo": {
-    "prefix": "commandBarDemo",
-    "description": "",
-    "body": [
-                "<script type='text/javascript'>",
-                "\tfunction setCtxMenuAssociations(){",
-                "\t\t$('.ms-CommandBarItem--hasMenu').each(function(index,value){",
-                "\t\t\t$(value).on('click', function(e){",
-                "\t\t\t\tshowCtxMenu(value,e);});",
-                "\t\t\t",
-                "\t\t});",
-                "\t}",
-                "\tfunction showCtxMenu(item,e){",
-                "\t\tvar targetCtx = item.dataset['ctxid'];",
-                "\t\tvar ctxMenu = $('#' + targetCtx);",
-                "\t\t",
-                "\t\tctxMenu.attr('style','position:absolute;left:' + (e.clientX - 5) + 'px;top:' + (e.clientY - 5) + 'px');",
-                "\t\tctxMenu.addClass('is-open');",
-                "\t\t$(ctxMenu).on('mouseleave', function(){",
-                "\t\t\t\t$(this).off('mouseleave');",
-                "\t\t\t\thideCtxMenu(item);});",
-                "\t}",
-                "\t",
-                "\tfunction hideCtxMenu(item){",
-                "\t\tvar targetCtx = item.dataset['ctxid'];",
-                "\t\tvar ctxMenu = $('#' + targetCtx)[0];",
-                "\t\tif($(ctxMenu).hasClass('is-open')){",
-                "\t\t\t$(ctxMenu).removeClass('is-open');",
-                "\t\t}",
-                "\t}",                
-                "</script>"
-    ]
-}
-
-,"Demo JS/Markup for Progress Indicator": {
-    "prefix": "progressDemo",
-    "description": "",
-    "body": [
-                "<button id='id-btn1' class='ms-Button' onClick='setName(\"the name\")'>",
-                "\t<span id='id-btnlabel' class='ms-Button-label' >Set Name</span>",
-                "</button> ",
-                "<button id='id-btn2' class='ms-Button' onClick='setDescription(\"the description\")'>",
-                "\t<span id='id-btnlabel' class='ms-Button-label' >Set Description</span>",
-                "</button> ",
-                "<button id='id-btn3' class='ms-Button' onClick='setProgressPercent(.25)'>",
-                "\t<span id='id-btnlabel' class='ms-Button-label' >Set Progress Percent</span>",
-                "</button> ",
-                "<button id='id-btn4' class='ms-Button' onClick='setTotal(50)'>",
-                "\t<span id='id-btnlabel' class='ms-Button-label' >Set Total</span>",
-                "</button> ",
-                "<button id='id-btn5' class='ms-Button' onClick='setProgress(25)'>",
-                "\t<span id='id-btnlabel' class='ms-Button-label' >Set Progress</span>",
-                "</button>",
-                "<script>",
-                "function setProgressPercent(percent){",
-                "\tif (typeof component !== 'undefined') {",
-                "\t\tcomponent.setProgressPercent(percent);",
-                "\t}",
-                "}",
-                "",
-                "function setName(name){",
-                "\tif (typeof component !== 'undefined') {",
-                "\t\tcomponent.setName(name);",
-                "\t}",
-                "}",
-                "",
-                "function setDescription(desc){",
-                "\tif (typeof component !== 'undefined') {",
-                "\t\tcomponent.setDescription(desc);",
-                "\t}",
-                "}",
-                "",
-                "function setProgress(num){",
-                "\tif (typeof component !== 'undefined') {",
-                "\t\tcomponent.setProgress(num);",
-                "\t}",
-                "}",
-                "",
-                "function setTotal(total){",
-                "\tif (typeof component !== 'undefined') {",
-                "\t\tcomponent.setProgressPercent(0);",
-                "\t\tcomponent.setTotal(total);",
-                "\t}",
-                "}",
-                "</script>"
-    ]
-}
-
 /******************
 Office UI Fabric, VS Code Snippets
-Based on Fabric release 2.0.1
+Based on Fabric JS release 1.2.0 and Fabric Core release 4.1.0
 Provided by: Sector 43 Software (David Mann)
 
 Info: s43.io/FabricSnippets
 
-All HTML (c) Microsoft.  Adapted from GitHub source files.
+All HTML, JavaScript, CSS (c) Microsoft.  Adapted from GitHub source files.
 
 */
 
 /*******************CDN References*************************/
 ,"CDN References": {
-    "prefix": "uif-cdn",
-    "description": "Add Fabric 2.0.1 CDN link tags",
+    "prefix": "uifCdn",
+    "description": "Add Fabric CSS CDN link tags and local JS script tag",
     "body": [
-            "<link rel='stylesheet' href='http://appsforoffice.microsoft.com/fabric/2.0.1/fabric.min.css'>",
-            "<link rel='stylesheet' href='http://appsforoffice.microsoft.com/fabric/2.0.1/fabric.components.min.css'>"
+            "<link rel='stylesheet' href='http://appsforoffice.microsoft.com/fabric/fabric-core/4.1.0/fabric.min.css'>",
+            "<link rel='stylesheet' href='https://appsforoffice.microsoft.com/fabric/fabric-js/1.0.0/fabric.components.min.css'>",
+			"",
+			"<script type='text/javascript' src='fabric/fabric.min.js' ></script>",
+			"<script type='text/javascript' src='fabric/fabric.templates.js' ></script>",
+                "<!-- *** Correct above paths as necessary for your app ***  -->"
     ]
 }
 
 ,"Local References": {
-    "prefix": "uif-localRef",
-    "description": "Add Fabric 2.0.1 local link tags",
+    "prefix": "uifLocalRef",
+    "description": "Add Fabric local link tags",
     "body": [
                 "<link rel='stylesheet' href='fabric/fabric.min.css' />",
                 "<link rel='stylesheet' href='fabric/fabric.components.min.css' />",
-                "<script type='text/javascript' src='fabric/jquery.fabric.min.js' ></script>",
-                "<!--Correct paths as necessary-->"
+                "",
+				"<script type='text/javascript' src='fabric/fabric.min.js' ></script>",
+				"<script type='text/javascript' src='fabric/fabric.templates.js' ></script>",
+					"<!-- *** Correct above paths as necessary for your app ***  -->"
+    ]
+}
+,"snippet name": {
+    "prefix": "jqueryCDN",
+    "description": "Add JQuery 2.2.4 CDN script tag",
+    "body": [
+            "<script   src='https://code.jquery.com/jquery-2.2.4.min.js'   integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44='   crossorigin='anonymous'></script>"
+
     ]
 }
 
 
 /*******************Minimum Page*************************/
 ,"Fabric Minimum Page": {
-    "prefix": "uif-minPage",
+    "prefix": "uifMinPage",
     "description": "Inserts the minimum markup necessary for a Fabric page",
     "body": [
                 "<!doctype html>",
@@ -302,7 +73,7 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
                 "<head>",
                 "<link rel='stylesheet' href='fabric/fabric.min.css' />",
                 "<link rel='stylesheet' href='fabric/fabric.components.min.css' />",
-                "<script type='text/javascript' src='https://code.jquery.com/jquery-2.1.4.min.js'></script>",
+                "<script type='text/javascript' src='fabric/jquery.min.js'></script>",
                 "<script type='text/javascript' src='fabric/jquery.fabric.min.js' ></script>",
                 "<!--Correct paths as necessary-->",
                 "</head>",
@@ -317,103 +88,79 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
 /*******************Breadcrumb*************************/
 
 ,"Fabric Breadcrumb": {
-        "prefix": "uif-bread",
+        "prefix": "uifBread",
         "description": "Standard Fabric Breadcrumb",
         "body": [
-                "<div id='${1:id}' class='ms-Breadcrumb'>",
-                "\t<div class='ms-Breadcrumb-overflow'>",
-                    "\t\t<div class='ms-Breadcrumb-overflowButton ms-Icon ms-Icon--ellipsis' tabindex='1'></div>",
-                    "\t\t<i class='ms-Breadcrumb-chevron ms-Icon ms-Icon--chevronRight'></i>",
-                    "\t\t<div class='ms-Breadcrumb-overflowMenu'>",
-                    "\t\t\t<ul class='ms-ContextualMenu is-open'></ul>",
-                    "\t\t</div>",
-                "\t</div>",
-                "\t<ul id='${1:id}-list' class='ms-Breadcrumb-list'>",
-                "\t\t<!-- Breadcrumb items go here ",
-                "\t\tUse snippet uif-breadItem -->",                    
-                "\t</ul>",
-                "</div>"
-                ]        
-    }
+            "<div class='ms-Breadcrumb'>",
+            "   <div class='ms-Breadcrumb-overflow'>",
+            "       <div class='ms-Breadcrumb-overflowButton ms-Icon ms-Icon--More' tabindex='1'></div>",
+            "       <div class='ms-Breadcrumb-overflowMenu'>",
+            "           <ul class='ms-ContextualMenu is-open'>",
+            "           </ul>",
+            "       </div>",
+            "   </div>",
+            "   <ul class='ms-Breadcrumb-list'>",
+            "       <!-- Breadcrumb items go here ",
+            "            Use snippet uifBreadItem -->", 
+            "   </ul>",
+            "</div>",
+            "<script type='text/javascript'>",
+            "    var BreadcrumbHTML = document.querySelector('.ms-Breadcrumb');",
+            "    var Breadcrumb = new fabric['Breadcrumb'](BreadcrumbHTML);",
+            "</script>"
+            ]        
+}
     
-    ,"Breadcrumb Item": {
-        "prefix": "uif-breadItem",
+
+,"Breadcrumb Item": {
+        "prefix": "uifBreadItem",
         "description": "Markup for a single breadcrumb item",
         "body": [
-                    "<li class='ms-Breadcrumb-listItem'>",
-                    "\t<a class='ms-Breadcrumb-itemLink' href='#' tabindex='1'>${1:Item 1}</a>",
-                    "\t<i class='ms-Breadcrumb-chevron ms-Icon ms-Icon--chevronRight'></i>",
-                    "</li>",
+            "<li class='ms-Breadcrumb-listItem'>",
+            "    <a class='ms-Breadcrumb-itemLink' tabindex='0'>Item Text</a>",
+            "    <i class='ms-Breadcrumb-chevron ms-Icon ms-Icon--ChevronRight'></i>",
+            "</li>"
         ]
     }
     
-,"Fabric Breadcrumb JS": {
-    "prefix": "uif-breadJS",
-    "description": "JavaScript to initialize Breadcrumb",
-    "body": [
-                "<script type='text/javascript'>",
-                "\t$(function(){",
-                "\t\tif (typeof fabric !== 'undefined') {",
-                "\t\t\tif ('Breadcrumb' in fabric) {",
-                "\t\t\t  var elements = document.querySelectorAll('.ms-Breadcrumb');",
-                "\t\t\t  var i = elements.length;",
-                "\t\t\t  var component;",
-                "\t\t\t  while(i--) {",
-                "\t\t\t\tcomponent = new fabric['Breadcrumb'](elements[i]);",
-                "\t\t\t  }",
-                "\t\t\t}",
-                "\t\t  }", 
-                "\t});",               
-                "</script>"
-    ]
-}    
 
 /*******************Buttons*************************/
 
     ,"Fabric Button": {
-        "prefix": "uif-button",
+        "prefix": "uifButton",
         "body": [
-			"<button id='${1:id}' class='ms-Button'>",
-			"\t<span id='${1:id}-label' class='ms-Button-label'>${2:Button Text}</span>",		  
+			"<button class='ms-Button'>",
+			"    <span  class='ms-Button-label'>Button Text</span>",		  
 			"</button>"	
         ],
         "description": "Standard Fabric button"
     },
 	"Fabric Button Primary": {
-        "prefix": "uif-buttonPrimary",
+        "prefix": "uifButtonPrimary",
         "body": [
-			"<button id='${1:id}' class='ms-Button ms-Button--primary'>",
-			"\t<span id='${1:id}-label' class='ms-Button-label'>${2:Button Text}</span>",		  
+			"<button class='ms-Button ms-Button--primary'>",
+			"    <span class='ms-Button-label'>Button Text</span>",		  
 			"</button>"	
         ],
         "description": "Primary Fabric button"
     },
 	"Fabric Button Command": {
-        "prefix": "uif-buttonCommand",
+        "prefix": "uifButtonCommand",
         "body": [
-			"<button id='${1:id}' class='ms-Button ms-Button--command'>",
-            "\t<span id='${1:id}-icon' class='ms-Button-icon'><i class='ms-Icon ms-Icon--plus'></i></span>",
-            "\t<span id='${1:id}-label' class='ms-Button-label'>${2:Button Text}</span>",
+			"<button class='ms-Button ms-Button--command'>",
+            "    <span class='ms-Button-icon'><i class='ms-Icon ms-Icon--plus'></i></span>",
+            "    <span class='ms-Button-label'>Button Text</span>",
             "</button>"	
         ],
         "description": "Command Fabric button - shows designated icon to left of button label"
     },
-    "Fabric Button Compound": {
-        "prefix": "uif-buttonCompound",
-        "body": [
-			"<button id='${1:id}' class='ms-Button ms-Button--compound'>",
-            "\t<span id='${1:id}-label' class='ms-Button-label'>${2:Button Text}</span>",
-            "\t<span id='${1:id}-desc' class='ms-Button-description'>${2:Button Description}</span>",
-            "</button>"	
-        ],
-        "description": "Compound Fabric button - shows descriptive text below button label"
-    },
+    
     "Fabric Button Hero": {
-        "prefix": "uif-buttonHero",
+        "prefix": "uifButtonHero",
         "body": [
-			"<button id='${1:id}' class='ms-Button ms-Button--hero'>",
-            "\t<span id='${1:id}-icon' class='ms-Button-icon'><i class='ms-Icon ms-Icon--plus'></i></span>",
-            "\t<span id='${1:id}-label' class='ms-Button-label'>${2:Button Text}</span>",
+			"<button class='ms-Button ms-Button--hero'>",
+            "    <span class='ms-Button-icon'><i class='ms-Icon ms-Icon--plus'></i></span>",
+            "    <span class='ms-Button-label'>Button Text</span>",
             "</button>"	
         ],
         "description": "Hero Fabric button - shows styled button label and designated icon"
@@ -421,446 +168,409 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
 	
 /*******************Callout*************************/
 ,"Fabric Callout": {
-    "prefix": "uif-callout",
+    "prefix": "uifCallout",
     "description": "Standard Fabric Callout",
     "body": [
-            "<div id='${1:id}' class='ms-Callout ms-Callout--arrow${2:Direction}'>     <!-- Additional classes: ms-Callout--OOBE, ms-Callout--peek  -->",
-            "\t<div class='ms-Callout-main'>",
-            "\t\t<div id='${1:id}-header' class='ms-Callout-header'>",
-            "\t\t\t<p id='${1:id}-title' class='ms-Callout-title'>${3:Title}</p>",
-            "\t\t</div>",
-            "\t\t<button class='ms-Callout-close'>",
-            "\t\t\t<i class='ms-Icon ms-Icon--x'></i>",
-            "\t\t</button>",
-            "\t\t<div id='${1:id}-inner' class='ms-Callout-inner'>",
-            "\t\t\t<div id='${1:id}-content' class='ms-Callout-content'>",
-            "\t\t\t\t<p id='${1:id}-subText' class='ms-Callout-subText'>${4:Body}</p>",
-            "\t\t\t</div>",
-            "\t\t\t<div id='${1:id}-actions' class='ms-Callout-actions'>",
-            "\t\t\t\t<button class='ms-Callout-button ms-Button ms-Button--primary'>",
-            "\t\t\t\t\t<span class='ms-Button-label'>${4:Button Text}</span>",
-            "\t\t\t\t</button>",
-            "\t\t\t\t<a href='#' class='ms-Callout-link ms-Link ms-Link--hero'>${5:Link}</a>",
-            "\t\t\t</div>",
-            "\t\t</div>",
-            "\t</div>",
-            "</div>"
+            "<div id='myCallout' class='ms-Callout is-hidden'>  <!-- Additional classes: ms-Callout--OOBE, ms-Callout--peek  -->",
+            "    <div class='ms-Callout-main'>",
+            "        <div class='ms-Callout-header'>",
+            "            <p class='ms-Callout-title'>All of your favorite people</p>",
+            "        </div>",
+            "        <div class='ms-Callout-inner'>",
+            "            <div class='ms-Callout-content'>",
+            "                <p class='ms-Callout-subText  ms-Callout-subText-- '>Message body is optional. If help documentation is available, consider adding a link to learn more at the bottom.</p>",
+            "            </div>",
+            "            <div class='ms-Callout-actions'>",
+            "                <a class='ms-Link'>Learn more</a>",
+            "            </div>",
+            "        </div>",   
+            "    </div>",  
+            "</div>",
+            "<button id='openCallout' class='ms-Button '>",
+            "    <span class='ms-Button-label'>Open Callout</span>",
+            "</button> ",
+            "<script type='text/javascript'>",
+            "    var callout = document.getElementById('myCallout');",
+            "    var btn = document.getElementById('openCallout');",
+            "    if(callout && null !== callout){",
+            "        new fabric['Callout'](callout, btn, 'right');",
+            "    }",
+            "</script>"
     ]
 }
 
 
-/*******************Choice Field*************************/
+/*******************Checkbox Field*************************/
 ,"Fabric Checkbox": {
-    "prefix": "uif-check",
+    "prefix": "uifCheck",
     "description": "Fabric styled checkbox",
     "body": [
-            "<div id='${1:id}' class='ms-ChoiceField'>",
-            "\t<input id='${1:id}_1' class='ms-ChoiceField-input' type='checkbox'>",
-            "\t<label for='${1:id}_1' class='ms-ChoiceField-field'><span class='ms-Label'>${2:Label}</span></label>",
-            "</div>"
+            "<div id='myCheckbox' class='ms-CheckBox'>",
+            "    <input tabindex='-1' type='checkbox' class='ms-CheckBox-input' />     <!-- Additional attribute: checked  -->",
+            "    <label role='checkbox' class='ms-CheckBox-field' tabindex='0' aria-checked='false' name='checkboxa'>     <!-- Additional class: is-disabled  -->",
+            "        <span class='ms-Label'>Checkbox Label</span>",
+            "    </label>",
+            "</div>",
+            "<script type='text/javascript'>",
+            "    var CheckBoxElements = document.querySelectorAll('.ms-CheckBox');",
+            "    for(var i = 0; i < CheckBoxElements.length; i++) {",
+            "        new fabric['CheckBox'](CheckBoxElements[i]);",
+            "    }",
+            "</script>"
+    ]
+}
+
+
+/*******************Choice Field Group *************************/
+,"Fabric Choice Field Group": {
+    "prefix": "uifChoice",
+    "description": "Fabric styled radio button group",
+    "body": [
+            "<div class='ms-ChoiceFieldGroup' id='choicefieldgroup' role='radiogroup'>",
+            "    <div class='ms-ChoiceFieldGroup-title'>",
+            "        <label class='ms-Label'>Field Name</label>     <!-- Additional classes: is-required, is-disabled  -->",
+            "    </div>",
+            "    <ul class='ms-ChoiceFieldGroup-list'>",
+            "        <!-- Radiobutton items go here ",
+            "             Use snippet uifRadioItem -->", 
+            "    </ul>",
+            "</div>",
+            "<script type='text/javascript'>",
+            "    var ChoiceFieldGroupElements = document.querySelectorAll('.ms-ChoiceFieldGroup');",
+            "    for(var i = 0; i < ChoiceFieldGroupElements.length; i++) {",
+            "       new fabric['ChoiceFieldGroup'](ChoiceFieldGroupElements[i]);",
+            "    }",
+            "</script>"
     ]
 }
 
 ,"Fabric Radio": {
-    "prefix": "uif-radio",
-    "description": "Fabric styled radio button",
+    "prefix": "uifRadioItem",
+    "description": "Radio button for a Choice Field Group",
     "body": [
-            "<div id='${1:id}' class='ms-ChoiceField'>",
-            "\t<input id='${1:id}_1' class='ms-ChoiceField-input' type='radio' name='${3:group_name}'>",
-            "\t<label for='${1:id}_1' class='ms-ChoiceField-field'><span class='ms-Label'>${4:Label}</span></label>",
-            "\t<input id='${1:id}_2' class='ms-ChoiceField-input' type='radio' name='${3:group_name}'>",
-            "\t<label for='${1:id}_2' class='ms-ChoiceField-field'><span class='ms-Label'>${5:Label}</span></label>",
-            "</div>"
+        "<div class='ms-RadioButton'> ",
+        "    <input tabindex='-1' type='radio' class='ms-RadioButton-input' />",
+        "    <label role='radio' class='ms-RadioButton-field' tabindex='0' aria-checked='false'  name='choicefieldgroup' >     <!-- Additional classes: is-disabled, is-checked  -->",
+        "        <span class='ms-Label'>Option 1</span>",
+        "    </label>",
+        "</div> "
+
     ]
 }
 
-/*******************Date Picker*************************/
-,"Fabric Date Picker": {
-    "prefix": "uif-datePicker",
-    "description": "Fabric date picker",
+
+/*******************CommandBar*************************/
+
+,"Fabric Command Bar": {
+    "prefix": "uifCommandBar",
+    "description": "",
     "body": [
-                "<div id='${1:id}' class='ms-DatePicker'>",
-                "\t<div class='ms-TextField'>",
-                "\t\t<label class='ms-Label'>Start date</label>",
-                "\t\t<i class='ms-DatePicker-event ms-Icon ms-Icon--event'></i>",
-                "\t\t<input class='ms-TextField-field' type='text' placeholder='${1:Select a date}'&hellip;'>",
-                "\t</div>",
-                "\t<div class='ms-DatePicker-monthComponents'>",
-                "\t\t<span class='ms-DatePicker-nextMonth js-nextMonth'><i class='ms-Icon ms-Icon--chevronRight'></i></span>",
-                "\t\t<span class='ms-DatePicker-prevMonth js-prevMonth'><i class='ms-Icon ms-Icon--chevronLeft'></i></span>",
-                "\t\t<div class='ms-DatePicker-headerToggleView js-showMonthPicker'></div>",
-                "\t</div>",
-                "\t<span class='ms-DatePicker-goToday js-goToday'>${1:Go To Today}</span>",
-                "\t<div class='ms-DatePicker-monthPicker'>",
-                "\t\t<div class='ms-DatePicker-header'>",
-                "\t\t\t<div class='ms-DatePicker-yearComponents'>",
-                "\t\t\t\t<span class='ms-DatePicker-nextYear js-nextYear'><i class='ms-Icon ms-Icon--chevronRight'></i></span>",
-                "\t\t\t\t<span class='ms-DatePicker-prevYear js-prevYear'><i class='ms-Icon ms-Icon--chevronLeft'></i></span>",
-                "\t\t\t</div>",
-                "\t\t\t<div class='ms-DatePicker-currentYear js-showYearPicker'></div>",
-                "\t\t</div>",
-                "\t\t<div class='ms-DatePicker-optionGrid'>",
-                "\t\t\t<span class='ms-DatePicker-monthOption js-changeDate' data-month='0'>Jan</span>",
-                "\t\t\t<span class='ms-DatePicker-monthOption js-changeDate' data-month='1'>Feb</span>",
-                "\t\t\t<span class='ms-DatePicker-monthOption js-changeDate' data-month='2'>Mar</span>",
-                "\t\t\t<span class='ms-DatePicker-monthOption js-changeDate' data-month='3'>Apr</span>",
-                "\t\t\t<span class='ms-DatePicker-monthOption js-changeDate' data-month='4'>May</span>",
-                "\t\t\t<span class='ms-DatePicker-monthOption js-changeDate' data-month='5'>Jun</span>",
-                "\t\t\t<span class='ms-DatePicker-monthOption js-changeDate' data-month='6'>Jul</span>",
-                "\t\t\t<span class='ms-DatePicker-monthOption js-changeDate' data-month='7'>Aug</span>",
-                "\t\t\t<span class='ms-DatePicker-monthOption js-changeDate' data-month='8'>Sep</span>",
-                "\t\t\t<span class='ms-DatePicker-monthOption js-changeDate' data-month='9'>Oct</span>",
-                "\t\t\t<span class='ms-DatePicker-monthOption js-changeDate' data-month='10'>Nov</span>",
-                "\t\t\t<span class='ms-DatePicker-monthOption js-changeDate' data-month='11'>Dec</span>",
-                "\t\t</div>",
-                "\t</div>",
-                "\t<div class='ms-DatePicker-yearPicker'>",
-                "\t\t<div class='ms-DatePicker-decadeComponents'>",
-                "\t\t\t<span class='ms-DatePicker-nextDecade js-nextDecade'><i class='ms-Icon ms-Icon--chevronRight'></i></span>",
-                "\t\t\t<span class='ms-DatePicker-prevDecade js-prevDecade'><i class='ms-Icon ms-Icon--chevronLeft'></i></span>",
-                "\t\t</div>",
-                "\t</div>",
-                "</div>"
+        "<div class='ms-CommandBar '> ",
+        "   <div class='ms-CommandBar-sideCommands'>",        
+        "       <div class='ms-CommandButton  ms-CommandButton--noLabel  '>",
+        "           <button class='ms-CommandButton-button'  >",
+        "               <span class='ms-CommandButton-icon ms-fontColor-themePrimary'>",
+        "                   <i class='ms-Icon ms-Icon--CircleRing'></i></span>",
+        "                   <span class='ms-CommandButton-label'></span>  </button>",
+        "       </div>",
+        "   </div>",
+        "   <div class='ms-CommandBar-mainArea'>",
+        "      <div class='ms-SearchBox  ms-SearchBox--commandBar  '>",
+        "          <input class='ms-SearchBox-field' type='text' value='' />",
+        "          <label class='ms-SearchBox-label'>",
+        "              <i class='ms-SearchBox-icon ms-Icon ms-Icon--Search'></i>",
+        "              <span class='ms-SearchBox-text'>Search</span>",
+        "          </label>",        
+        "          <div class='ms-CommandButton ms-SearchBox-clear ms-CommandButton--noLabel  '>",
+        "              <button class='ms-CommandButton-button'  >",
+        "                  <span class='ms-CommandButton-icon '><i class='ms-Icon ms-Icon--Cancel'></i></span><span class='ms-CommandButton-label'></span>  </button>",
+        "          </div>",        
+        "          <div class='ms-CommandButton ms-SearchBox-exit ms-CommandButton--noLabel  '>",
+        "              <button class='ms-CommandButton-button'  >",
+        "                  <span class='ms-CommandButton-icon '><i class='ms-Icon ms-Icon--ChromeBack'></i></span><span class='ms-CommandButton-label'></span>  </button>",
+        "         </div>",        
+        "         <div class='ms-CommandButton ms-SearchBox-filter ms-CommandButton--noLabel  '>",
+        "             <button class='ms-CommandButton-button'  >",
+        "                 <span class='ms-CommandButton-icon '><i class='ms-Icon ms-Icon--Filter'></i></span><span class='ms-CommandButton-label'></span>  </button>",
+        "          </div>",
+        "     </div>",
+        "        <!-- CommandBar items go here ",
+        "              Use snippets uifCommandBarItem or uifCommandBarContextMenu -->",  
+        "      <div class='ms-CommandButton ms-CommandBar-overflowButton ms-CommandButton--noLabel '>",
+        "          <button class='ms-CommandButton-button'  >",
+        "              <span class='ms-CommandButton-icon '><i class='ms-Icon ms-Icon--More'></i></span><span class='ms-CommandButton-label'></span></button>",
+        "          <ul class='ms-ContextualMenu  is-opened ms-ContextualMenu--hasIcons'>",
+        "              <li class='ms-ContextualMenu-item '>",
+        "                  <a class='ms-ContextualMenu-link ' tabindex='1' ></a>",
+        "                 <i class='ms-Icon'></i>",
+        "             </li>",
+        "         </ul>",
+        "     </div>",
+        "   </div>",
+        "</div>",
+        "<script type='text/javascript'>",
+        "    var CommandBarElements = document.querySelectorAll('.ms-CommandBar');",
+        "    for(var i = 0; i < CommandBarElements.length; i++) {",
+        "       new fabric['CommandBar'](CommandBarElements[i]);",
+        "    }",
+        "</script>"
     ]
 }
 
-,"Fabric Date Picker JS": {
-    "prefix": "uif-datePickerJS",
-    "description": "Script required for Date picker component",
+
+,"Fabric CommandBar Button": {
+    "prefix": "uifCommandBarButton",
+    "description": "An individual button within a CommandBar",
     "body": [
-                "<script type='text/javascript' src='fabric/picker.date.js'></script>",
-                "<script type='text/javascript'>",
-                "$(document).ready(function() {",
-                "\tvar options = {};",
-                "\tif ($.fn.DatePicker) {",
-                "\t\t$('.ms-DatePicker').DatePicker(options);",
-                "\t}",
-                "});",                
-                "</script>"
+        "<div class='ms-CommandButton'>     <!--    option: ms-CommandButton--noLabel    -->",
+        "    <button class='ms-CommandButton-button'  >",
+        "        <span class='ms-CommandButton-icon ms-fontColor-themePrimary'>",
+        "           <i class='ms-Icon ms-Icon--CircleRing'></i></span>",
+        "           <span class='ms-CommandButton-label'>Command</span>  </button>",
+        "</div>"                
     ]
 }
 
-,"Fabric Datepicker Options": {
-    "prefix": "uif-datePickerOptions",
-    "description": "Available options for customizing the datepicker",
+,"Fabric CommandBar ContextMenu": {
+    "prefix": "uifCommandBarContextMenu",
+    "description": "A dropdown menu shown inside a CommandBar",
     "body": [
-                "<script type='text/javascript'>",
-                "",
-                "//options documentation: http://amsul.ca/pickadate.js/date/",
-                "",
-                "var options = {",
-                "    // Strings and translations",
-                "monthsFull: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],",
-                "monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],",
-                "weekdaysFull: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],",
-                "weekdaysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],",
-                "showMonthsShort: false,",
-                "showWeekdaysFull: false,",
-                "",
-                "// Buttons",
-                "today: 'Today',",
-                "clear: 'Clear',",
-                "close: '',",
-                "",
-                "// Accessibility labels",
-                "labelMonthNext: 'Next month',",
-                "labelMonthPrev: 'Previous month',",
-                "labelMonthSelect: 'Select a month',",
-                "labelYearSelect: 'Select a year',",
-                "",
-                "// Formats - read the docs, need to take extra steps for hidden input",
-                "format: 'd mmmm, yyyy',      // format shown to user",
-                "formatSubmit: undefined,     // format submitted to server",
-                "hiddenPrefix: undefined,",
-                "hiddenSuffix: '_submit',",
-                "hiddenName: undefined,      // send only the hidden value to the server",
-                "",
-                "// Editable input",
-                "editable: undefined,  //true to allow direct editing in text field",
-                "",
-                "// Dropdown selectors",
-                "selectYears: false,",
-                "selectMonths: false,",
-                "",
-                "// First day of the week",
-                "firstDay: 1, //falsy=Sun; truthy=Mon",
-                "",
-                "// Date limits",
-                "min: [2016,2,1],  // when specified as integers, months are 0-based!",
-                "max: 50,          // +/- integers set relative to today, true=today, false=no limits",
-                "",
-                "// Disable dates",
-                "disable:[ ",
-                "     //  true                                      // Disable all *except* what follows  ",
-                "     // ,[2016,2,12], [2016,2,13]                  // Array of dates",
-                "     // ,{ from: [2016,2,15], to: [2016,2,18] }    // Range of dates (inclusive)        ",
-                "     // ,1,7                                       // Days of week",
-                "     // ,{ from: -1, to: true }                    // Relative range",
-                "     // ,[2016,2,14, 'inverted']                   // Exceptions to a range",
-                "    ],                 ",
-                "    ",
-                "",
-                "// Root picker container",
-                "container: undefined,",
-                "",
-                "// Hidden input container",
-                "containerHidden: undefined,",
-                "",
-                "// Close on a user action - don't work?",
-                "closeOnSelect: false,",
-                "closeOnClear: false,",
-                "",
-                "// Events - be careful changing these!",
-                "onStart: undefined,",
-                "onRender: undefined,",
-                "onOpen: undefined,",
-                "onClose: undefined,",
-                "onSet: undefined,",
-                "onStop: undefined,",
-                "}",
-                "</script>"
+        "<div class='ms-CommandButton'>",
+        "   <button class='ms-CommandButton-button'  >",
+        "       <span class='ms-CommandButton-icon ms-fontColor-themePrimary'>",
+        "           <i class='ms-Icon ms-Icon--CircleRing'></i></span>",
+        "           <span class='ms-CommandButton-label'>Context Menu</span>",
+        "           <span class='ms-CommandButton-dropdownIcon'>",
+        "               <i class='ms-Icon ms-Icon--ChevronDown'></i></span>",
+        "   </button>",
+        "   <ul class='ms-ContextualMenu  is-opened ms-ContextualMenu--hasIcons'>",
+        "       <!-- Contextual Menu Items Go Here",
+        "            Use snippets uifCommandBarContextualMenuItem and uifContextualMenuDivider    -->",
+        "   </ul>",
+        "</div>"
+    ]
+}
+
+,"Fabric CommandBar Contextual Menu Item": {
+    "prefix": "uifCommandBarContextualMenuItem",
+    "description": "An individual item to go within a Contextual Menu of a Commandbar.  Supports icons",
+    "body": [
+        "<li class='ms-ContextualMenu-item'>",
+        "    <a class='ms-ContextualMenu-link  is-selected' tabindex='1'>     <!-- Additional classes: ms-ContextualMenu-item--header, is-selected, is-disabled  -->",
+        "       Item Text</a>",
+        "   <i class='ms-Icon ms-Icon--CircleRing'></i>", 
+        "</li>"      
+
+    ]
+}
+
+
+/*******************Contextual Menu*************************/
+
+,"Fabric Contextual Menu": {
+    "prefix": "uifContextMenu",
+    "description": "A context menu, showing options for dividers, sub-menus and disabled and selected items",
+    "body": [
+        "<a id='openMenu' href='#'>Open Menu</a>",
+        "<ul class='ms-ContextualMenu  is-hidden'>     <!-- Add class ms-ContextualMenu--multiselect to allow multiple selections -->",
+        "   <!-- Menu items go here",
+        "        Use snippet uifContextualMenuItem or uifContextualMenuDivider-->",
+        "</ul>",
+        "<script type='text/javascript'>",
+        "   var ButtonSubmenuElement = document.getElementById('openMenu');",
+        "   var ContextualMenuSubmenuElement = document.querySelector('.ms-ContextualMenu');",
+        "   var contextualMenu = new fabric['ContextualMenu'](ContextualMenuSubmenuElement, ButtonSubmenuElement);",
+        "</script>"
+    ]
+}
+
+,"Fabric Contextual Menu Item": {
+    "prefix": "uifContextualMenuItem",
+    "description": "An individual item to go within a Contextual Menu.  Does not support icons",
+    "body": [
+        "<li class='ms-ContextualMenu-item'>     <!-- Additional classes: ms-ContextualMenu-item--header -->",
+        "    <a class='ms-ContextualMenu-link' tabindex='1'>     <!-- Additional classes: is-selected, is-disabled  -->",
+        "       Item Text</a>",
+        "</li>"      
+
+    ]
+}
+
+,"Fabric Contextual Menu Item With SubMenu": {
+    "prefix": "uifContextualMenuSubMenu",
+    "description": "A menu item set up to contain child menu items",
+    "body": [
+        "<li class='ms-ContextualMenu-item ms-ContextualMenu-item--hasMenu'>",
+        "   <a class='ms-ContextualMenu-link ' tabindex='1'>Has Sub-items</a>",
+        "   <i class='ms-ContextualMenu-subMenuIcon ms-Icon ms-Icon--ChevronRight'></i>",
+        "   <ul class='ms-ContextualMenu is-hidden'>",
+        "   <!-- Menu items go here",
+        "        Use snippet uifContextualMenuItem or uifContextualMenuDivider -->",
+        "</ul>"
+    ]
+}
+
+,"Fabric Contextual Menu Divider": {
+    "prefix": "uifContextualMenuDivider",
+    "description": "",
+    "body": [
+        "<li class='ms-ContextualMenu-item ms-ContextualMenu-item--divider'></li>"
+    ]
+}
+
+/*******************DatePicker*************************/
+,"DatePicker": {
+    "prefix": "uifDatePicker",
+    "description": "",
+    "body": [
+        "<script   src='https://code.jquery.com/jquery-2.2.4.min.js'   integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44='   crossorigin='anonymous'></script>",    
+        "<script src='PickaDate.js'></script>",
+        "",
+        "<div class='ms-DatePicker'>",
+        "<div class='ms-TextField'>",
+        "    <label class='ms-Label'>Start date</label>",
+        "    <i class='ms-DatePicker-event ms-Icon ms-Icon--Event'></i>",
+        "    <input class='ms-TextField-field' type='text' placeholder='Select a date&hellip;'>",
+        "</div>",
+        "<div class='ms-DatePicker-monthComponents'>",
+        "    <span class='ms-DatePicker-nextMonth js-nextMonth'><i class='ms-Icon ms-Icon--ChevronRight'></i></span>",
+        "    <span class='ms-DatePicker-prevMonth js-prevMonth'><i class='ms-Icon ms-Icon--ChevronLeft'></i></span>",
+        "    <div class='ms-DatePicker-headerToggleView js-showMonthPicker'></div>",
+        "</div>",
+        "<span class='ms-DatePicker-goToday js-goToday'>Go to today</span>",
+        "<div class='ms-DatePicker-monthPicker'>",
+        "    <div class='ms-DatePicker-header'>",
+        "    <div class='ms-DatePicker-yearComponents'>",
+        "        <span class='ms-DatePicker-nextYear js-nextYear'><i class='ms-Icon ms-Icon--ChevronRight'></i></span>",
+        "        <span class='ms-DatePicker-prevYear js-prevYear'><i class='ms-Icon ms-Icon--ChevronLeft'></i></span>",
+        "    </div>",
+        "    <div class='ms-DatePicker-currentYear js-showYearPicker'></div>",
+        "    </div>",
+        "    <div class='ms-DatePicker-optionGrid'>",
+        "    <span class='ms-DatePicker-monthOption js-changeDate' data-month='0'>Jan</span>",
+        "    <span class='ms-DatePicker-monthOption js-changeDate' data-month='1'>Feb</span>",
+        "    <span class='ms-DatePicker-monthOption js-changeDate' data-month='2'>Mar</span>",
+        "     <span class='ms-DatePicker-monthOption js-changeDate' data-month='3'>Apr</span>",
+        "    <span class='ms-DatePicker-monthOption js-changeDate' data-month='4'>May</span>",
+        "    <span class='ms-DatePicker-monthOption js-changeDate' data-month='5'>Jun</span>",
+        "    <span class='ms-DatePicker-monthOption js-changeDate' data-month='6'>Jul</span>",
+        "    <span class='ms-DatePicker-monthOption js-changeDate' data-month='7'>Aug</span>",
+        "    <span class='ms-DatePicker-monthOption js-changeDate' data-month='8'>Sep</span>",
+        "    <span class='ms-DatePicker-monthOption js-changeDate' data-month='9'>Oct</span>",
+        "    <span class='ms-DatePicker-monthOption js-changeDate' data-month='10'>Nov</span>",
+        "    <span class='ms-DatePicker-monthOption js-changeDate' data-month='11'>Dec</span>",
+        "    </div>",
+        "</div>",
+        "<div class='ms-DatePicker-yearPicker'>",
+        "    <div class='ms-DatePicker-decadeComponents'>",
+        "    <span class='ms-DatePicker-nextDecade js-nextDecade'><i class='ms-Icon ms-Icon--ChevronRight'></i></span>",
+        "    <span class='ms-DatePicker-prevDecade js-prevDecade'><i class='ms-Icon ms-Icon--ChevronLeft'></i></span>",
+        "    </div>",
+        "</div>",
+        "</div>",
+        "",
+        "<script type='text/javascript'>",
+        "var DatePickerElements = document.querySelectorAll('.ms-DatePicker');",
+        "for(var i = 0; i < DatePickerElements.length; i++) {",
+        "    new fabric['DatePicker'](DatePickerElements[i]);",
+        "}",
+        "</script>",
     ]
 }
 
 
 /*******************Dialog*************************/
 ,"Standard Fabric Dialog": {
-    "prefix": "uif-dialog",
+    "prefix": "uifDialog",
     "description": "Markup for standard dialog, with support for open/close actions",
     "body": [
-                "<button id='${1:id}-openBtn' class='ms-Button js-DialogAction--open' data-target='.ms-Dialog--${1:id}'>",
-                "\t<span id='${1:id}-Label' class='ms-Button-label'>${3:Open Dialog}</span>",
-                "</button>",
-
-                "<div id='${1:id}' class='ms-Dialog ms-Dialog--${1:id}'>     <!-- Additional classes: ms-Dialog--lgHeader, ms-Dialog--multiline -->",
-                "\t<div id='${1:id}-overlay' class='ms-Overlay ms-Overlay--dark js-DialogAction--close'></div>",
-                "\t<div id='${1:id}-main' class='ms-Dialog-main'>",
-                "\t\t<button class='ms-Dialog-button ms-Dialog-button--close js-DialogAction--close'>",
-                "\t\t\t<i class='ms-Icon ms-Icon--x'></i>",
-                "\t\t</button>",
-                "\t\t<div id='${1:id}-header' class='ms-Dialog-header'>",
-                "\t\t\t<p class='ms-Dialog-title'>${4:Header}</p>",
-                "\t\t</div>",
-                "\t\t<div id='${1:id}-inner' class='ms-Dialog-inner'>",
-                "\t\t\t<div id='${1:id}-content' class='ms-Dialog-content'>",
-                "\t\t\t\t<p id='${1:id}-text' class='ms-Dialog-subText'>${5:Text}</p>",                
-                "\t\t\t</div>",
-                "\t\t\t<div id='${1:id}-actions' class='ms-Dialog-actions'>",
-                "\t\t\t\t<div id='${1:id}-actionsRight' class='ms-Dialog-actionsRight'>",                
-                "\t\t\t\t</div>",
-                "\t\t\t</div>",
-                "\t\t</div>",
-                "\t</div>",
-                "</div>"
+        "<div class='ms-Dialog '>     <!-- optional classes: ms-Dialog--multiline, ms-Dialog--lgHeader, ms-Dialog--blocking, ms-Dialog--close -->",
+        "    <div class='ms-Dialog-title'>Header Goes Here</div>",
+        "       <div class='ms-Dialog-content'>",
+        "           <p class='ms-Dialog-subText'>Content Goes Here</p>",                            
+        "    </div>",
+        "    <div class='ms-Dialog-actions'>",
+        "        <button class='ms-Button ms-Dialog-action ms-Button--primary'>",
+        "           <span class='ms-Button-label'>Save</span>",
+        "        </button>",
+        "        <button class='ms-Button ms-Dialog-action>",
+        "           <span class='ms-Button-label'>Cancel</span>",
+        "        </button>",
+        "    </div>",
+        "</div>",
+        "<script type='text/javascript'>",
+        "    var DialogElement = document.querySelector('.ms-Dialog');",
+        "    var dialogComponent = new fabric['Dialog'](DialogElement);",
+        "    dialogComponent.open();",
+        "</script>"
     ]
 }
 
-
-,"Fabric Dialog JS": {
-    "prefix": "uif-dialogJS",
-    "description": "Script required for Dialog component",
-    "body": [
-                "<script type='text/javascript'>",
-                "$(function() {",
-                "\tif ($.fn.Dialog) {",
-                "\t\t$('.ms-Dialog').Dialog();",
-                "\t}",
-                "});",                
-                "</script>"
-    ]
-}
 
 
 /*******************Dropdown*************************/
 ,"Fabric Dropdown": {
-    "prefix": "uif-dropdown",
+    "prefix": "uifDropdown",
     "description": "Fabric dropdown",
     "body": [
-                "<div id='${1:id}' class='ms-Dropdown' tabindex='0'>     <!-- Additional class: is-disabled -->",
-                "\t<label id='${1:id}-label' class='ms-Label'>${2:Label}</label>",
-                "\t<i class='ms-Dropdown-caretDown ms-Icon ms-Icon--caretDown'></i>",
-                "\t<select id='${1:id}-select' class='ms-Dropdown-select'>",
-                "\t\t<option>option 1</option>",
-                "\t\t<option>option 2</option>",
-                "\t\t<option>option 3</option>",
-                "\t</select>",
-                "</div>"
-    ]
-}
-
-,"Fabric Dropdown JS": {
-    "prefix": "uif-dropdownJS",
-    "description": "Script required for Dropdown component",
-    "body": [
+                "<div class='ms-Dropdown  ' tabindex='0'>     <!--   optional class: is-disabled   -->",
+                "    <label class='ms-Label'>Label Goes Here</label>",
+                "    <i class='ms-Dropdown-caretDown ms-Icon ms-Icon--ChevronDown'></i>",
+                "    <select class='ms-Dropdown-select'>",
+                "        <option>--Select--</option>",
+                "        <option>One</option>",
+                "        <option>Two</option>",
+                "        <option>Three</option>",
+                "    </select>",
+                "    </div>",
                 "<script type='text/javascript'>",
-                "$(document).ready(function() {",
-                "\tif ($.fn.Dropdown) {",
-                "\t\t$('.ms-Dropdown').Dropdown();",
-                "\t}",
-                "});",                
+                "    var DropdownHTMLElements = document.querySelectorAll('.ms-Dropdown');",
+                "    for (var i = 0; i < DropdownHTMLElements.length; ++i) {",
+                "        var Dropdown = new fabric['Dropdown'](DropdownHTMLElements[i]);",
+                "    }",
                 "</script>"
     ]
 }
+
+
 
 /*******************Facepile*************************/
 
 
 
 ,"Fabric Facepile": {
-    "prefix": "uif-facepile",
-    "description": "Sample markup for the Facepile component, including all child components",
+    "prefix": "uifFacepile",
+    "description": "Sample markup for the Facepile component",
     "body": [
-                "<div class='ms-Facepile'>",
-                "\t<button class='ms-Facepile-itemBtn ms-Facepile-itemBtn--addPerson js-addPerson'>",
-                "\t\t<i class='ms-Facepile-addPersonIcon ms-Icon ms-Icon--personAdd'></i>",
-                "\t</button>",
-                "\t<div class='ms-Facepile-members'>",
-                "\t\t<!-- Current members go here",
-                "			 use snippet uif-facePerson -->",
-                "\t\t",
-                "\t</div>",
-                "\t<button class='ms-Facepile-itemBtn ms-Facepile-itemBtn--overflow js-overflowPanel'>",
-                "\t\t<span class='ms-Facepile-overflowText'>(# in overflow)</span>",
-                "\t</button>",
-                "\t<div class='ms-Facepile-personaCard'>\t   ",
-                "		<!-- Persona card goes here",
-                "			 use snippet uif-personaCard -->",
-                "\t</div>",
-                "</div>",
-                "",
-                "<!-- Panel -->",
-                "<div class='ms-Facepile-panel ms-Facepile-panel--addPerson ms-Panel'>",
-                "\t<div class='ms-Overlay ms-Overlay--dark ms-PanelAction-close'></div>",
-                "\t<div class='ms-Panel-main'>",
-                "\t\t<div class='ms-Panel-commands'>",
-                "\t\t\t<button class='ms-Panel-closeButton ms-PanelAction-close'>",
-                "\t\t\t\t<i class='ms-Panel-closeIcon ms-Icon ms-Icon--x'></i>",
-                "\t\t\t</button> ",
-                "\t\t</div>",
-                "\t\t<div class='ms-Panel-contentInner'>",
-                "\t\t\t<p class='ms-Panel-headerText'>Members</p>",
-                "\t\t\t<div class='ms-PeoplePicker ms-PeoplePicker--Facepile'>",
-                "\t\t\t\t<div class='ms-PeoplePicker-searchBox'>",
-                "\t\t\t\t\t<input class='ms-PeoplePicker-searchField' type='text' placeholder='Add members'>",
-                "\t\t\t\t</div>",
-                "\t\t\t\t<!-- Suggested list -->",
-                "\t\t\t\t<div class='ms-PeoplePicker-results'>",
-                "\t\t\t\t\t<div class='ms-PeoplePicker-peopleListHeader'>",
-                "\t\t\t\t\t\t<span>Suggested contacts</span>",
-                "\t\t\t\t\t</div>",
-                "\t\t\t\t\t<ul class='ms-PeoplePicker-peopleList'>",
-                "\t\t\t\t\t\t<!-- PeoplePicker results go here",
-                "							 use snippet faceResult -->",
-                "\t\t\t\t\t</ul>",
-                "\t\t\t\t\t<div class='ms-PeoplePicker-searchMore js-searchMore'>",
-                "\t\t\t\t\t\t<div tabindex='0' role='button' class='ms-PeoplePicker-searchMoreBtn'>",
-                "\t\t\t\t\t\t\t<div class='ms-PeoplePicker-searchMoreIcon'>",
-                "\t\t\t\t\t\t\t\t<i class='ms-Icon ms-Icon--search'></i>",
-                "\t\t\t\t\t\t\t</div>",
-                "\t\t\t\t\t\t\t<div class='ms-PeoplePicker-searchMorePrimary'>Search Contacts &amp; Directory</div>",
-                "\t\t\t\t\t\t</div>",
-                "\t\t\t\t\t</div>",
-                "\t\t\t\t</div>",
-                "\t\t\t\t<!-- Members list -->",
-                "\t\t\t\t<div class='ms-PeoplePicker-selected is-active'>",
-                "\t\t\t\t\t<div class='ms-PeoplePicker-selectedHeader'>",
-                "\t\t\t\t\t\t<span class='ms-PeoplePicker-selectedCount'>(Count)</span> member<span>s</span>",
-                "\t\t\t\t\t</div>",
-                "\t\t\t\t\t<ul class='ms-PeoplePicker-selectedPeople'>",
-                "\t\t\t\t\t\t<!-- Selected people go here",
-                "							 use snippet uif-facePersonSelected -->",
-                "\t\t\t\t\t</ul>",
-                "\t\t\t\t</div>",
-                "\t\t\t\t<div class='ms-PeoplePicker-personaCard'>",
-                "\t\t\t\t\t<!-- Persona card goes here",
-                "						 use snippet uif-personaCard -->",
-                "\t\t\t\t</div>",
-                "\t\t\t</div>",
-                "\t\t</div>",
-                "\t</div>",
-                "</div>"
+            "<div class='ms-FacePile'>",
+            "    <button class='ms-FacePile-addButton ms-FacePile-addButton--addPerson'>",
+            "        <i class='ms-FacePile-addPersonIcon ms-Icon ms-Icon--AddFriend'></i>",
+            "    </button>",
+            "",    
+            "    <!-- Persona components go here, one per person, with optional class added: ms-Persona--facePile  -->",
+            "",    
+            "    <button class='ms-FacePile-addButton ms-FacePile-addButton--overflow'>",
+            "        <span class='ms-FacePile-overflowText'>+3</span>",
+            "    </button>",
+            "</div>",
+            "",
+            "<script type='text/javascript'>",
+            "    var FacePileElements = document.querySelectorAll('.ms-FacePile');",
+            "    for(var i = 0; i < FacePileElements.length; i++) {",
+            "        new fabric['FacePile'](FacePileElements[i]);",
+            "    }",
+            "</script>"
+     
     ]
 }
 
-,"Fabric Facepile Person": {
-    "prefix": "uif-facePerson",
-    "description": "Markup for an individual person in the Facepile component",
+/*******************Icon*************************/
+
+,"Fabric Icon": {
+    "prefix": "uifIcon",
+    "description": "Markup for a Fabric icon",
     "body": [
-                "<div id='${1:id}-person' tabindex='0' role='button' class='ms-Facepile-itemBtn ms-Facepile-itemBtn--member' title='${2:Name}'>",
-                "\t\t\t<div class='ms-Persona ms-Persona--xs'>",
-                "\t\t\t\t<div class='ms-Persona-imageArea'>",
-                "\t\t\t\t\t<div class='ms-Persona-initials ms-Persona-initials--blue'>${3:DM}</div>",
-                "\t\t\t\t\t<img class='ms-Persona-image' src='' alt='Persona image'>",
-                "\t\t\t\t</div>",
-                "\t\t\t\t<div class='ms-Persona-presence'></div>",
-                "\t\t\t\t<div class='ms-Persona-details'>",
-                "\t\t\t\t\t<div class='ms-Persona-primaryText'>${2:David Mann}</div>",
-                "\t\t\t\t\t<div class='ms-Persona-secondaryText'>${5:Title}</div>",
-                "\t\t\t\t</div>",
-                "\t\t\t</div>",
-                "\t\t</div>"
-    ]
-}
-
-,"Fabric People Picker Result": {
-    "prefix": "uif-faceResult",
-    "description": "An individual person's information for display in Facepile search results",
-    "body": [
-                "<li id='${1:id}-result' class='ms-PeoplePicker-peopleListItem ms-PeoplePicker-result'>",
-                "\t<div tabindex='0' role='button' class='ms-PeoplePicker-peopleListBtn'>",
-                "\t\t<div class='ms-Persona ms-Persona--selectable ms-Persona--sm'>",
-                "\t\t\t<div class='ms-Persona-imageArea'>",
-                "\t\t\t\t<div class='ms-Persona-initials ms-Persona-initials--${2:darkBlue}'>${3:DM}</div>",
-                "\t\t\t\t<img class='ms-Persona-image' src='' alt='Persona image'>",
-                "\t\t\t</div>",
-                "\t\t\t<div class='ms-Persona-presence'></div>",
-                "\t\t\t<div class='ms-Persona-details'>",
-                "\t\t\t\t<div class='ms-Persona-primaryText'>${5:David Mann}</div>",
-                "\t\t\t\t<div class='ms-Persona-secondaryText'>${6:Title}</div>",
-                "\t\t\t</div>",
-                "\t\t</div>",
-                "\t</div>",
-                "</li>"
-
-    ]
-}
-
-,"Fabric Facepile Selected Person": {
-    "prefix": "uif-facePersonSelected",
-    "description": "An individual person information to show as 'selected' in Facepile panel",
-    "body": [
-                "<li id='${1:id}-selected' class='ms-PeoplePicker-selectedPerson'>",
-                "\t<div class='ms-Persona ms-Persona--sm'>",
-                "\t\t<div class='ms-Persona-imageArea'>",
-                "\t\t\t<div class='ms-Persona-initials ms-Persona-initials--${2:darkBlue}'>${3:DM}</div>",
-                "\t\t\t<img class='ms-Persona-image' src='' alt='Persona image'>",
-                "\t\t</div>",
-                "\t\t<div class='ms-Persona-presence'></div>",
-                "\t\t<div class='ms-Persona-details'>",
-                "\t\t\t<div class='ms-Persona-primaryText'>${5:David Mann}</div>",
-                "\t\t\t<div class='ms-Persona-secondaryText'>${6:Title}</div>",
-                "\t\t</div>",
-                "\t</div>",
-                "\t<button class='ms-PeoplePicker-resultAction js-selectedRemove'><i class='ms-Icon ms-Icon--x'></i></button>",
-                "</li>"
-
-    ]
-}
-
-,"Fabric Facepile JS": {
-    "prefix": "uif-facepileJS",
-    "description": "Script required for Facepile component",
-    "body": [
-                "<script type='text/javascript'>",
-                "$(document).ready(function() {",
-                "\tif ($.fn.Facepile) {",
-                "\t\t$('.ms-Facepile').Facepile();",
-                "\t}",
-                "\tif ($.fn.PersonaCard) {",
-                "\t\t$('.ms-PersonaCard').PersonaCard();",
-                "\t}",
-                "});",                
-                "</script>"
+                "<i class='ms-Icon ms-Icon--Mail></i>"
     ]
 }
 
@@ -869,11 +579,11 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
 /*******************Label*************************/
 
 ,"Fabric Label": {
-    "prefix": "uif-label",
+    "prefix": "uifLabel",
     "description": "Label for fields",
     "body": [
-                "<label id='${1:id}' class='ms-Label'>  <!-- Additional classes: is-required is-disabled  -->",
-                "\tLabel Text",
+                "<label class='ms-Label'>  <!-- Additional classes: is-required is-disabled  -->",
+                "    Label Text",
                 "</label>"
     ]
 }
@@ -882,154 +592,36 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
 /*******************Link*************************/
 
 ,"Fabric Link": {
-    "prefix": "uif-link",
+    "prefix": "uifLink",
     "description": "Basic hyperlink",
     "body": [
-                "<a id='${1:id}' href='${1:URL}' class='ms-Link'>${2:Text}</a>"
+                "<a href='#' class='ms-Link' title=''>Text/a>"
     ]
 }
 
-,"Fabric Hero Link": {
-    "prefix": "uif-linkHero",
-    "description": "Hero hyperlink",
-    "body": [
-                "<a id='${1:id}' href='${1:URL}' class='ms-Link ms-Link--hero'>${2:Text}</a>"
-    ]
-}
 
-/*******************CommandBar*************************/
 
-,"Fabric Command Bar": {
-    "prefix": "uif-CommandBar",
-    "description": "",
-    "body": [
-                "<div id='${1:id}' class='ms-CommandBar'>",
-                "\t<div class='ms-CommandBarSearch'>",
-                "\t\t<input class='ms-CommandBarSearch-input' type='text' placeholder='Search' tabindex='1'/>",
-                "\t\t<div class='ms-CommandBarSearch-iconWrapper ms-CommandBarSearch-iconSearchWrapper'>",
-                "\t\t\t<i class='ms-Icon ms-Icon--search'></i>",
-                "\t\t</div>",
-                "\t\t<div class='ms-CommandBarSearch-iconWrapper ms-CommandBarSearch-iconClearWrapper ms-font-s'>",
-                "\t\t\t<i class='ms-Icon ms-Icon--x'></i>",
-                "\t\t</div>",
-                "\t</div>",
-                "\t<div class='ms-CommandBar-sideCommands'>",
-                "\t\t<!-- CommandBar Items go here-->",
-                "	<!-- Use snippet uif-CommandBarItem to insert -->",
-                "\t</div>",
-                "\t<div class='ms-CommandBar-mainArea'>",
-                "\t\t<!-- CommandBar Items go here-->",
-                "	<!-- Use snippet uif-CommandBarItem to insert -->",
-                "",
-                "\t\t<!-- Overflow Commands -->",
-                "\t\t<div class='ms-CommandBarItem ms-CommandBarItem--iconOnly ms-CommandBarItem-overflow'>",
-                "\t\t\t<div class='ms-CommandBarItem-linkWrapper'>",
-                "\t\t\t\t<a class='ms-CommandBarItem-link' tabindex='2'>",
-                "\t\t\t\t\t<span class='ms-CommandBarItem-icon ms-Icon ms-Icon--ellipsis'></span>",
-                "\t\t\t\t\t<span class='ms-CommandBarItem-commandText ms-font-m ms-font-weight-regular'>...</span>",
-                "\t\t\t\t\t<i class='ms-CommandBarItem-chevronDown ms-Icon ms-Icon--chevronDown'></i>",
-                "\t\t\t\t</a>",
-                "\t\t\t</div>",
-                "\t\t\t<ul class='ms-CommandBar-overflowMenu ms-ContextualMenu'></ul>",
-                "\t\t</div>",
-                "\t\t<!-- End Overflow Commands -->",
-                "\t</div>",
-                "</div>"
-
-    ]
-}
-
-,"Fabric CommandBar Item": {
-    "prefix": "uif-CommandBarItem",
-    "description": "An individual item within a CommandBar",
-    "body": [
-                "<div id='${1:id}' class='ms-CommandBarItem'>     <!--    options: ms-CommandBarItem--hasTextOnly, ms-CommandBarItem--iconOnly    -->",
-                "\t<div class='ms-CommandBarItem-linkWrapper'>",
-                "\t\t<a class='ms-CommandBarItem-link' tabindex='1'>",
-                "\t\t\t<span class='ms-CommandBarItem-icon ms-Icon ms-Icon--${2:Icon}'></span>",
-                "\t\t\t<span class='ms-CommandBarItem-commandText ms-font-m ms-font-weight-regular'>${3:Text}</span>",
-                "\t\t\t<i class='ms-CommandBarItem-chevronDown ms-Icon ms-Icon--chevronDown'></i>",
-                "\t\t</a>",
-                "\t</div>",
-                "</div>"
-    ]
-}
-
-,"Fabric CommandBar JS": {
-    "prefix": "uif-commandBarJS",
-    "description": "JavaScript to initialize CommandBar",
-    "body": [
-                "<script type='text/javascript'>",
-                "\t$(function(){",
-                "\t\tif ($.fn.CommandBar) {",
-                "\t\t\t$('.ms-CommandBar').CommandBar();",
-                "\t\t}",
-                "\t})",
-                "</script>"
-
-    ]
-}
-
-,"Command Bar Context Menu JS": {
-    "prefix": "jsCommandBarCtx",
-    "description": "",
-    "body": [
-                "<script type='text/javascript'>",
-                "function showMenu(id, x){",
-                "\t$('#' + id + 'CtxMenu').addClass('is-open').css('position','absolute').css('left',event.clientX + 'px');",
-                "}",
-                "</script>"
-    ]
-}
-
-/*******************Contextual Menu*************************/
-
-,"Fabric Contextual Menu": {
-    "prefix": "uif-contextMenu",
-    "description": "A context menu, showing options for dividers, sub-menus and disabled and selected items",
-    "body": [
-                "<ul id='${1:id}' class='ms-ContextualMenu is-open'>     <!-- Add class ms-ContextualMenu--multiselect to allow multiple selections -->",
-                "\t<li class='ms-ContextualMenu-item ms-ContextualMenu-item--header'>Heading</li>",
-                "\t<li class='ms-ContextualMenu-item'><a class='ms-ContextualMenu-link' href='${2:URL}'>${3:Text}</a></li>",
-                "\t<li class='ms-ContextualMenu-item'><a class='ms-ContextualMenu-link is-selected' href='${2:URL}'>${3:Text2}</a></li>",
-                "\t<li class='ms-ContextualMenu-item ms-ContextualMenu-item--divider'></li>",
-                "\t<li class='ms-ContextualMenu-item'>",
-                "\t\t<a class='ms-ContextualMenu-link ms-ContextualMenu-link--hasMenu' href='#'>Options</a>",
-                "\t\t<i class='ms-ContextualMenu-subMenuIcon ms-Icon ms-Icon--chevronRight'></i>",
-                "\t\t<ul class='ms-ContextualMenu'>",
-                "\t\t\t<li class='ms-ContextualMenu-item'><a class='ms-ContextualMenu-link' href='${4:URL}'>${5:Option1}</a></li>",
-                "\t\t\t<li class='ms-ContextualMenu-item '><a class='ms-ContextualMenu-link is-disabled' href='${6:URL}'>${7:Option2-Disabled}</a></li>",
-                "\t\t</ul>",
-                "\t</li>",
-                "</ul>"
-    ]
-}
-
-,"Fabric Contextual Menu JS": {
-    "prefix": "uif-contextualMenuJS",
-    "description": "JavaScript to initialize Contextual Menu",
-    "body": [
-                "<script type='text/javascript'>",
-                "\t$(function(){",
-                "\t\tif ($.fn.ContextualMenu) {",
-                "\t\t\t$('.ms-ContextualMenu').ContextualMenu();",
-                "\t\t}",
-                "\t})",
-                "</script>"
-
-    ]
-}
-
-/*******************List / Grid*************************/
+/*******************List *************************/
 
 ,"Fabric List": {
-    "prefix": "uif-list",
+    "prefix": "uifList",
     "description": "Shell for a Fabric List.  Items are placed as indicated in comments",
     "body": [                
-                "<ul id='${1:id}' class='ms-List'>     <!-- Additional class: ms-List--grid   -->",
-                "<!-- Individual List Items go here-->",
-                "<!-- Use snippet uif-listItem -->",
-                "</ul>"
+        "<ul class='ms-List'>     <!-- Could use <ol> tag instead  -->",
+        "",
+        "    <!-- Individual List Items go here",
+        "         Use snippet uifListItem -->",
+        "</ul>",
+        "<script type='text/javascript'>",
+        "    var ListElements = document.querySelectorAll('.ms-List');",
+        "    for(var i = 0; i < ListElements.length; i++) {",
+        "        new fabric['List'](ListElements[i]);",
+        "    }",
+        "    var ListItemElements = document.querySelectorAll('.ms-ListItem');",
+        "    for(var i = 0; i < ListItemElements.length; i++) {",
+        "        new fabric['ListItem'](ListItemElements[i]);",
+        "    }",
+        "</script>"
     ]
 }
 
@@ -1038,357 +630,318 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
 /*******************ListItem*************************/
 
 ,"Fabric ListItem": {
-    "prefix": "uif-listItem",
-    "description": "Individual items for display in a List or Grid",
+    "prefix": "uifListItem",
+    "description": "Individual items for display in a List",
     "body": [
                 "<li class='ms-ListItem'>     <!-- additional classes: is-unread is-selectable is-selected is-unseen -->",
-                "\t<span class='ms-ListItem-primaryText'>${2:Primary Text}</span>",
-                "\t<span class='ms-ListItem-secondaryText'>${3:Secondary Text}</span>",
-                "\t<span class='ms-ListItem-tertiaryText'>${4:Tertiary Text}</span>",
-                "\t<span class='ms-ListItem-metaText'>${5:Meta Text}</span>",
-                "\t<div class='ms-ListItem-selectionTarget js-toggleSelection'></div>",
-                "\t<div class='ms-ListItem-actions'>",
-                "\t\t<div class='ms-ListItem-action'><i class='ms-Icon ms-Icon--${6:Icon}'></i></div>",                
-                "\t</div>",
+                "    <span class='ms-ListItem-primaryText'>Primary Text</span>",
+                "    <span class='ms-ListItem-secondaryText'>Secondary Text</span>",
+                "    <span class='ms-ListItem-tertiaryText'>Tertiary Text</span>",
+                "    <span class='ms-ListItem-metaText'>Meta Text</span>",
+                "    <div class='ms-ListItem-selectionTarget'></div>",
+                "    <div class='ms-ListItem-actions'>",
+                "        <div class='ms-ListItem-action'><i class='ms-Icon ms-Icon--Mail'></i></div>",                
+                "    </div>",
                 "</li>"
     ]
 }
 
-,"Fabric ListItem JS": {
-    "prefix": "uif-listItemJS",
-    "description": "JavaScript required to enable 'selectable'",
-    "body": [
-                "<script type='text/javascript'>",
-                "$(document).ready(function() {",
-                "\tif ($.fn.ListItem) {",
-                "\t\t$('.ms-ListItem').ListItem();",
-                "\t}",
-                "});",
-                "</script>"
-    ]
-}
 
-/*******************Icon*************************/
 
-,"Fabric Icon": {
-    "prefix": "uif-icon",
-    "description": "Markup for a Fabric icon",
-    "body": [
-                "<i id='${1:id}' class='ms-Icon ms-Icon-${icon type}'></i>"
-    ]
-}
+
 
 /******************* MessageBanner *************************/
 
 ,"Fabric Message Banner": {
-    "prefix": "uif-messageBanner",
-    "description": "Displays a message bar at the top of the page",
+    "prefix": "uifMessageBanner",
+    "description": "Presents a message to the user, with an optional call to action. The message is typically an error, update, or alert.",
     "body": [
-                "<div id='${1:id}' class='ms-MessageBanner is-hidden'>",
-                "\t<div class='ms-MessageBanner-content'>",
-                "\t\t<div class='ms-MessageBanner-text'>",
-                "\t\t\t<div class='ms-MessageBanner-clipper'>",
-                "\t\t\t\t${2:Message}",
-                "\t\t\t\t<div>",
-                "\t\t\t\t\t<br />Detailed message info can go here",
-                "\t\t\t\t</div>",
-                "\t\t\t</div>",
-                "\t\t</div>",
-                "\t\t<button class='ms-MessageBanner-expand'>",
-                "\t\t\t<i class='ms-Icon ms-Icon--chevronsDown'></i>",
-                "\t\t</button>",
-                "\t\t<div class='ms-MessageBanner-action'>",
-                "\t\t\t<button class='ms-Button ms-Button--primary ms-fontColor-neutralLight' onclick=\"javascript:alert('Hello World');\">${2:Button Text}</button>",
-                "\t\t</div>",
-                "\t</div>",
-                "\t<button class='ms-MessageBanner-close'>",
-                "\t\t<i class='ms-Icon ms-Icon--x'></i>",
-                "\t</button>",
-                "</div>",
-                "<button id='showBanner' class='ms-Button' onclick='showBanner(\"${1:id}\")'>",
-                "\t<span id='id-label' class='ms-Button-label'>Show Banner</span>",
-                "</button>"
+        "<div class='ms-MessageBanner is-hidden'>",
+        "    <div class='ms-MessageBanner-content'>",
+        "      <div class='ms-MessageBanner-text'>",
+        "        <div class='ms-MessageBanner-clipper'>",
+        "          You&#x27;ve reached your total storage on OneDrive. Please upgrade your storage plan if you need more storage.",
+        "        </div>",
+        "      </div>",
+        "      <button class='ms-MessageBanner-expand'>",
+        "        <i class='ms-Icon ms-Icon--ChevronDown'></i>",
+        "      </button>",
+        "      <div class='ms-MessageBanner-action'>",
+        "        ",
+        "  <button class='ms-Button ",
+        "    ms-Button--primary",
+        "    '>",
+        "    <span class='ms-Button-label'>Get More Storage</span>",
+        "  </button>",
+        "      </div>",
+        "    </div>",
+        "    <button class='ms-MessageBanner-close'>",
+        "      <i class='ms-Icon ms-Icon--Clear'></i>",
+        "    </button>",
+        "  </div>",
+        "  <button class='ms-Button docs-MessageBannerExample-button'>Show the banner</button>",
+        "</div>",
+        "",
+        "<script type='text/javascript'>",
+        "  var MessageBannerExample = document.querySelector('.docs-MessageBannerExample');",
+        "  var MessageBanner = new fabric['MessageBanner'](MessageBannerExample.querySelector('.ms-MessageBanner'));",
+        "  var MessageBannerButton = MessageBannerExample.querySelector('.docs-MessageBannerExample-button');",
+        "  var MessageBannerCloseButton = MessageBannerExample.querySelector('.ms-MessageBanner-close');",
+        "",
+        "  // When clicking the button, open the MessageBanner",
+        "  MessageBannerButton.onclick = function() {",
+        "    MessageBanner.showBanner();",
+        "    this.classList.add('is-hidden');",
+        "  };",
+        "",
+        "  // Hide 'Show the Banner Button' when banner is active",
+        "  MessageBannerCloseButton.addEventListener('click', function(){",
+        "  	setTimeout(function() {",
+        "  		MessageBannerButton.classList.remove('is-hidden');",
+        "  	}, 500);",
+        "  });",
+        "</script>"
     ]
 }
 
-,"Fabric Message Banner JS": {
-    "prefix": "uif-messageBannerJS",
-    "description": "Sample script to show Message Banner component",
+
+/*******************MessageBar*************************/
+,"Fabric Message Bar": {
+    "prefix": "uifMessageBar",
+    "description": "Displays a colored informational/warning/error message to the user",
     "body": [
-                "<script type='text/javascript'>",
-                "function showBanner(id){",
-                "\tif (typeof fabric !== 'undefined') {",
-                "\t\tif ('MessageBanner' in fabric) {",
-                "\t\t\tvar elm = document.getElementById(id);",
-                "\t\t\tvar component = new fabric['MessageBanner'](elm);",
-                "\t\t\tcomponent.showBanner();",
-                "\t\t}",
-                "\t}",
-                "}",
-                "</script>"                                 
+        "<div class='ms-MessageBar'>",
+        "  <div class='ms-MessageBar-content'>",
+        "    <div class='ms-MessageBar-icon'>",
+        "      <i class='ms-Icon ms-Icon--Info'></i>",
+        "    </div>",
+        "    <div class='ms-MessageBar-text'>",
+        "      Lorem ipsum dolor sit amet, a elit sem interdum consectetur adipiscing elit.<br>",
+        "      <a href='#' class='ms-Link'>Hyperlink string</a>",
+        "    </div>",
+        "  </div>",
+        "</div>"
     ]
 }
 
-/******************* NavBar *************************/
-
-,"Fabric NavBar": {
-    "prefix": "uif-navBar",
-    "description": "A navigational layout element that includes search, commanding, and contextual menus. On smaller screen sizes, it collapses into a hamburger menu that presents its elements in a Panel",
-    "body": [
-                "<div id='${1:id}' class='ms-NavBar'>",
-                "\t<div class='ms-NavBar-openMenu js-openMenu'>",
-                "\t\t<i class='ms-Icon ms-Icon--menu'></i>",
-                "\t</div>",
-                "\t<div class='ms-Overlay'></div>",
-                "\t<ul class='ms-NavBar-items'>",
-                "\t\t<li class='ms-NavBar-item ms-NavBar-item--search ms-u-hiddenSm'>",
-                "\t\t\t<div class='ms-TextField'>",
-                "\t\t\t\t<input class='ms-TextField-field'>",
-                "\t\t\t</div>",
-                "\t\t</li>",
-                "\t\t<li class='ms-NavBar-item'><a class='ms-NavBar-link'>${1:Text}</a></li>",
-                "\t\t<li class='ms-NavBar-item ms-NavBar-item--hasMenu'>",
-                "\t\t\t<a class='ms-NavBar-link'>${2:SubMenus}</a>",
-                "\t\t\t<i class='ms-NavBar-chevronDown ms-Icon ms-Icon--chevronDown'></i>",
-                "\t\t\t<ul class='ms-ContextualMenu'>",
-                "\t\t\t\t<li class='ms-ContextualMenu-item'><a class='ms-ContextualMenu-link'>${3:Sub1}</a></li>",
-                "\t\t\t\t<li class='ms-ContextualMenu-item'><a class='ms-ContextualMenu-link'>${4:Sub2}</a></li>",
-                "\t\t\t</ul>",
-                "\t\t</li>",
-                "\t\t<li class='ms-NavBar-item is-disabled'><a class='ms-NavBar-link'>${5:Disabled}</a></li>",
-                "<!-- Right item with Icon -->",
-                "\t\t<li class='ms-NavBar-item ms-NavBar-item--right'><a class='ms-NavBar-link'><i class='ms-Icon ms-Icon--upload'></i>${6:Text}</a></li>",
-                "\t</ul>",
-                "</div>"
-    ]
-}
-
-,"Fabric NavBar JS": {
-    "prefix": "uif-navBarJS",
-    "description": "Script required for NavBar component",
-    "body": [
-               "<script type='text/javascript'>",
-                "$(document).ready(function() {",
-                "\tif ($.fn.NavBar) {",
-                "\t\t$('.ms-NavBar').NavBar();",
-                "\t}",
-                "});",                
-                "</script>"
-    ]
-}
 
 /******************* Org Chart *************************/
 
 ,"Fabric Org Chart": {
-    "prefix": "uif-orgChart",
+    "prefix": "uifOrgChart",
     "description": "A component embedded within the PersonaCard component that displays hierarchical information about an individual within an organization.",
     "body": [
-                "<div id='${1:id}' class='ms-OrgChart'>",
-                "\t<div class='ms-OrgChart-group'>",
-                "\t\t<div class='ms-OrgChart-groupTitle'>${2:Group name}</div>",
-                "\t\t<ul class='ms-OrgChart-list'>",
-                "\t\t\t<!-- Individual person LIs go here -->",
-                "\t\t\t<!-- Use snippet uif-orgPerson -->",
-                "\t\t</ul>",
-                "\t</div>",
+                "<div class='ms-OrgChart'>    ",
+                "    <div class='ms-OrgChart-group'>",
+                "      <div class='ms-OrgChart-groupTitle'>Group Name</div>",
+                "      <ul class='ms-OrgChart-list'>",
+                "          <!--  OrgChart people go here",
+                "                Use snippet uifOrgPerson  -->",
+                "      </ul>",
+                "    </div>",
                 "</div>"
     ]
 }
 
 ,"Fabric Org Chart Person": {
-    "prefix": "uif-orgPerson",
+    "prefix": "uifOrgPerson",
     "description": "An individual person for the Org Chart",
     "body": [
                 "<li class='ms-OrgChart-listItem'>",
-                "\t<button class='ms-OrgChart-listItemBtn'>",
-                "\t\t<div class='ms-Persona'>",
-                "\t\t\t<div class='ms-Persona-imageArea ms-bgColor-blue'>",
-                "\t\t\t\t<i class='ms-Persona-placeholder ms-Icon ms-Icon--person'></i>",
-                "\t\t\t\t\t<img class='ms-Persona-image' src=''>",
-                "\t\t\t</div>",
-                "\t\t\t<div class='ms-Persona-presence'></div>",
-                "\t\t\t<div class='ms-Persona-details'>",
-                "\t\t\t\t<div class='ms-Persona-primaryText'>${2:Name}</div>",
-                "\t\t\t\t<div class='ms-Persona-secondaryText'>${3:Department}</div>",
-                "\t\t\t</div>",
-                "\t\t</div>",
-                "\t</button>",
-                "</li>",
+                "    <button class='ms-OrgChart-listItemBtn'>",
+                "        <div class='ms-Persona'>",
+                "            <div class='ms-Persona-imageArea'>",
+                "                <div class='ms-Persona-initials ms-Persona-initials--blue'>DM</div>",
+                "                <img class='ms-Persona-image' src='../persona/Persona.Person2.png'>",
+                "            </div>",
+                "            <div class='ms-Persona-presence'></div>",
+                "            <div class='ms-Persona-details'>",
+                "                <div class='ms-Persona-primaryText'>Name</div>",
+                "                <div class='ms-Persona-secondaryText'>Department</div>",
+                "            </div>",
+                "        </div>",
+                "    </button>",
+                "</li>"
     ]
 }
 
 /******************* Overlay *************************/
 
 ,"Fabric Overlay": {
-    "prefix": "uif-overlay",
+    "prefix": "uifOverlay",
     "description": "Standard white overlay",
     "body": [
-                "<div class='ms-Overlay'></div>"
-    ]
-}
+                "<div class='ms-Overlay'></div>     <!--  Optional Class: ms-Overlay--dark  -->",
+                "",
+                "<script type='text/javascript'>",
+            "    var OverlayElement = document.querySelector('.ms-Overlay');",
+            "    var Overlay = new fabric['Overlay'](OverlayElement);",
+            "    Overlay.show();",
+            "</script>"
 
-,"Fabric Overlay Dark": {
-    "prefix": "uif-overlayDark",
-    "description": "Dark grey overlay",
-    "body": [
-                "<div class='ms-Overlay ms-Overlay--dark'></div>"
-    ]
-}
-
-,"Fabric Overlay None": {
-    "prefix": "uif-overlayNone",
-    "description": "Invisible overlay",
-    "body": [
-                "<div class='ms-Overlay ms-Overlay--none'></div>"
     ]
 }
 
 
 /******************* Panel *************************/
 
-,"Fabric Panel Open Button": {
-    "prefix": "uif-panelOpenBtn",
-    "description": "Button showing how to display a Panel",
+,"Fabric Panel": {
+    "prefix": "uifPanel",
+    "description": "Container attached to side of page to support additional actions/information",
     "body": [
-                "<button id='${1:id}' class='ms-Button ms-PanelAction-open'>",
-                "\t<span class='ms-Button-label'>${2:Button text}</span>",
-                "</button>"
+        "<button class='ms-Button' id='btn'>",
+        "      <span class='ms-Button-label'>Open Panel</span>",
+        "</button>",
+        "<div class='ms-Panel' id='myPanel'>",
+        "    <button class='ms-Panel-closeButton ms-PanelAction-close'>",
+        "        <i class='ms-Panel-closeIcon ms-Icon ms-Icon--Cancel'></i>",
+        "    </button>",
+        "    <div class='ms-Panel-contentInner'>",
+        "        <p class='ms-Panel-headerText'>Panel Header</p>",
+        "        <div class='ms-Panel-content'>",
+        "            <span class='ms-font-m'>Content goes here</span>",
+        "        </div>",
+        "    </div>",
+        "</div>",
+        "",
+        "<script type='text/javascript'>",
+        "    var btn = document.getElementById('btn');",
+        "    var pnl = document.getElementById('myPanel');",
+        "    btn.addEventListener('click', function(i) {",
+        "                new fabric['Panel'](pnl); ",
+        "    });",
+        "</script>"
+    ]
+}
+
+/******************* People Picker *************************/
+,"Fabric PeoplePicker": {
+    "prefix": "uifPeoplePicker",
+    "description": "Sample markup for the PeoplePicker component",
+    "body": [
+        "<div class='ms-PeoplePicker' id='people'>",
+        "    <div class='ms-PeoplePicker-searchBox'>",
+        "        <div class='ms-TextField  ms-TextField--textFieldUnderlined '>",
+        "            <input class='ms-TextField-field' type='text' value='' placeholder='Select or enter an option' >",
+        "        </div>",
+        "    </div>",
+        "    <div class='ms-PeoplePicker-results  '>",
+        "        <div class='ms-PeoplePicker-resultGroup'>",
+        "            <div class='ms-PeoplePicker-resultGroupTitle'>",
+        "                Contacts",        
+        "        </div>",
+        "            <!-- PeoplePicker result goes here",
+        "                 Use snippet uifPeoplePickerResult  -->",
+        "        <button class='ms-PeoplePicker-searchMore'>",
+        "            <div class='ms-PeoplePicker-searchMoreIcon'>",
+        "                <i class='ms-Icon ms-Icon--Search'></i>",
+        "            </div>",
+        "            <div class='ms-PeoplePicker-searchMoreText'>",
+        "                Search my groups",
+        "            </div>",
+        "        </button>",
+        "  </div>",
+        "</div>",
+        "",
+        "<script type='text/javascript'>",
+        "   var people = document.getElementById('people');",
+        "   new fabric['PeoplePicker'](people);",
+        "   var PersonaElements = document.querySelectorAll('.ms-Persona');",
+        "   for(var i = 0; i < PersonaElements.length; i++) {",
+        "       new fabric['Persona'](PersonaElements[i]);",
+        "   }",
+        "</script>"
 
     ]
 }
 
-,"Fabric Panel": {
-    "prefix": "uif-panel",
-    "description": "Container attached to side of page to support additional actions/information",
+,"Fabric PeoplePicker Result": {
+    "prefix": "uifPeoplePickerResult",
+    "description": "A single person result for the PeoplePicker",
     "body": [
-                "<div id='${1:id}' class='ms-Panel'>     <!-- Additional classes: ms-Panel--extraLarge, ms-Panel--Large, ms-Panel--Medium     -->",
-                "\t<div class='ms-Overlay ms-Overlay--dark ms-PanelAction-close'></div>",
-                "\t<div class='ms-Panel-main'>",
-                "\t\t<div class='ms-Panel-commands'>",
-                "\t\t\t<div class='ms-CommandBar'>",
-                "\t\t\t\t<div class='ms-CommandBar-sideCommands'>",
-                "\t\t\t\t\t<div class='ms-CommandBarItem ms-PanelAction-close'>",
-                "\t\t\t\t\t\t<div class='ms-CommandBarItem-linkWrapper'>",
-                "\t\t\t\t\t\t\t<div class='ms-CommandBarItem-link'>",
-                "\t\t\t\t\t\t\t\t<span class='ms-CommandBarItem-icon ms-Icon ms-Icon--question'></span>",
-                "\t\t\t\t\t\t\t\t<span class='ms-CommandBarItem-commandText ms-font-m ms-font-weight-regular'>Help</span>",
-                "\t\t\t\t\t\t\t</div>",
-                "\t\t\t\t\t\t</div>",
-                "\t\t\t\t\t</div>",
-                "\t\t\t\t</div>",
-                "\t\t\t\t<div class='ms-CommandBar-mainArea'>",
-                "\t\t\t\t\t<div class='ms-CommandBarItem ms-PanelAction-close'>",
-                "\t\t\t\t\t\t<div class='ms-CommandBarItem-linkWrapper'>",
-                "\t\t\t\t\t\t\t<div class='ms-CommandBarItem-link'>",
-                "\t\t\t\t\t\t\t\t<span class='ms-CommandBarItem-icon ms-Icon ms-Icon--save'></span>",
-                "\t\t\t\t\t\t\t\t<span class='ms-CommandBarItem-commandText ms-font-m ms-font-weight-regular'>Save</span>",
-                "\t\t\t\t\t\t\t</div>",
-                "\t\t\t\t\t\t</div>",
-                "\t\t\t\t\t</div>",
-                "\t\t\t\t\t<div class='ms-CommandBarItem ms-PanelAction-close'>",
-                "\t\t\t\t\t\t<div class='ms-CommandBarItem-linkWrapper'>",
-                "\t\t\t\t\t\t\t<div class='ms-CommandBarItem-link'>",
-                "\t\t\t\t\t\t\t\t<span class='ms-CommandBarItem-icon ms-Icon ms-Icon--x'></span>",
-                "\t\t\t\t\t\t\t\t<span class='ms-CommandBarItem-commandText ms-font-m ms-font-weight-regular'>Cancel</span>",
-                "\t\t\t\t\t\t\t</div>",
-                "\t\t\t\t\t\t</div>",
-                "\t\t\t\t\t</div>",                  
-                "\t\t\t\t</div>",
-                "\t\t\t</div>",
-                "\t\t</div>",
-                "\t\t<div class='ms-Panel-contentInner'>",
-                "\t\t\t<p class='ms-Panel-headerText'>${2:Title}</p>",
-                "\t\t\t<p class='ms-font-m'>${3:Content}</p>",
-                "\t\t</div>",
-                "\t</div>",
+        "<div class='ms-PeoplePicker-result ' tabindex='1'>",
+        "          <!-- Persona component goes here",
+        "               Use snippet uifPersona  -->",
+        "    <button class='ms-PeoplePicker-resultAction'><i class='ms-Icon ms-Icon--Clear'></i></button>",
+        "</div>"
+    ]
+}
+
+
+
+/******************* Persona *************************/
+,"Fabric Persona": {
+    "prefix": "uifPersona",
+    "description": "A responsive control for showing user information",
+    "body": [
+                "<div class='ms-Persona'>     <!-- Additional classes: ms-Persona--square, ms-Persona--tiny, ms-Persona--xs, ms-Persona--sm, ms-Persona--lg, ms-Persona--xl  -->",
+                "    <div class='ms-Persona-imageArea'>",
+                "        <div class='ms-Persona-initials ms-Persona-initials--blue'>DM</div>",
+                "        <img class='ms-Persona-image' src='' />",
+                "    </div>",
+                "    <div class='ms-Persona-presence'></div>",
+                "    <div class='ms-Persona-details'>",
+                "        <div class='ms-Persona-primaryText'>David Mann</div>",
+                "        <div class='ms-Persona-secondaryText'>Secondary Text</div>",
+                "        <div class='ms-Persona-tertiaryText'>Tertiary Text</div>",
+                "        <div class='ms-Persona-optionalText'>Optional Text</div>",
+                "    </div>",
                 "</div>"
     ]
 }
 
-,"Fabric Panel JS": {
-    "prefix": "uif-panelJS",
-    "description": "Script required for Panel component",
-    "body": [
-                "<script type='text/javascript'>",
-                "$(document).ready(function() {",
-                "\tif ($.fn.Panel) {",
-                "\t\t$('.ms-Panel').Panel();",
-                "\t}",
-                "});",                
-                "</script>"
-    ]
-}
+
 
 /******************* Persona Card *************************/
 
 
 
 ,"Fabric Persona Card": {
-    "prefix": "uif-personaCard",
+    "prefix": "uifPersonaCard",
     "description": "Details of an individual presented in a card format",
     "body": [
-                "<div class='ms-PersonaCard'>",
-                "\t<div class='ms-PersonaCard-persona'>",
-                "\t\t<div class='ms-Persona ms-Persona--xl'>",
-                "\t\t\t<div class='ms-Persona-imageArea'>",
-                "\t\t\t\t<div class='ms-Persona-initials ms-Persona-initials--blue'>DM</div>",
-                "\t\t\t\t<img class='ms-Persona-image' src='' />",
-                "\t\t\t</div>",
-                "\t\t\t<div class='ms-Persona-presence'></div>",
-                "\t\t\t<div class='ms-Persona-details'>",
-                "\t\t\t\t<div class='ms-Persona-primaryText' title='David Mann'>David Mann</div>",
-                "\t\t\t\t<div class='ms-Persona-secondaryText'>Grand Poobah, Sector43 Software</div>",
-                "\t\t\t\t<div class='ms-Persona-tertiaryText'>Office: 2468</div>",
-                "\t\t\t\t<div class='ms-Persona-optionalText'>Available until 4 PM</div>",
-                "\t\t\t</div>",
-                "\t\t</div>",
-                "\t</div>",
-                "\t<ul class='ms-PersonaCard-actions'>",
-                "\t\t<li id='chat' class='ms-PersonaCard-action is-active'><i class='ms-Icon ms-Icon--chat'></i></li>",
-                "\t\t<li id='phone' class='ms-PersonaCard-action'><i class='ms-Icon ms-Icon--phone'></i></li>",
-                "\t\t<li id='video' class='ms-PersonaCard-action'><i class='ms-Icon ms-Icon--video'></i></li>",
-                "\t\t<li id='mail' class='ms-PersonaCard-action'><i class='ms-Icon ms-Icon--mail'></i></li>",
-                "\t\t<li class='ms-PersonaCard-overflow' alt='View profile in Delve' title='View profile in Delve'>View profile</li>",
-                "\t\t<li id='org' class='ms-PersonaCard-action ms-PersonaCard-orgChart'><i class='ms-Icon ms-Icon--org'></i></li>",
-                "\t</ul>",
-                "\t<div class='ms-PersonaCard-actionDetailBox'>",
-                "\t\t<ul id='detailList' class='ms-PersonaCard-detailChat'>",
-                "\t\t\t<li id='chat' class='ms-PersonaCard-actionDetails detail-1'>",
-                "\t\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Lync:</span> <a class='ms-Link' href='#'>Start Lync call</a></div>",
-                "\t\t\t</li>",
-                "\t\t\t<li id='phone' class='ms-PersonaCard-actionDetails detail-2'>",
-                "\t\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Personal:</span> 610-555-1234</div>",
-                "\t\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Work:</span> 610-555-5678</div>",
-                "\t\t\t</li>",
-                "\t\t\t<li id='video' class='ms-PersonaCard-actionDetails detail-3'>",
-                "\t\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Skype:</span> <a class='ms-Link' href='#'>Start Skype call</a></div>",
-                "\t\t\t</li>",
-                "\t\t\t<li id='mail' class='ms-PersonaCard-actionDetails detail-4'>",
-                "\t\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Personal:</span> <a class='ms-Link' href='mailto:someone@outlook.com'>someone@outlook.com</a></div>",
-                "\t\t\t\t<div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Work:</span> <a class='ms-Link' href='mailto:someoneelse@outlook.com'>someoneelse@outlook.com</a></div>",
-                "\t\t\t</li>",
-                "\t\t\t<!-- org chart -->",
-                "\t\t\t<li id='org' class='ms-PersonaCard-actionDetails detail-5'>",
-                "\t\t\t\t <!--\tOrg Chart, use snippet uif-orgChart -->\t\t\t\t\t",
-                "\t\t\t</li>",
-                "\t\t\t<!-- /org chart -->",
-                "\t\t</ul>",
-                "\t</div>",
-                "</div>"
-    ]
-}
-
-,"Fabric PersonaCard JS": {
-    "prefix": "uif-personaCardJS",
-    "description": "Script required for PersonaCard component",
-    "body": [
-                "<script type='text/javascript'>",               
-                "\t$(document).ready(function() {",
-                "\t\tif ($.fn.PersonaCard) {",
-                "\t\t\t$('.ms-PersonaCard').PersonaCard();",
-                "\t\t\t}",
-                "\t});",
-                "</script>"                    
+        "<div class='ms-PersonaCard '>",
+        "    <!--  Persona goes here   ",
+        "          Use snippet uifPersona    -->",
+        "    <ul class='ms-PersonaCard-actions'>",
+        "        <li data-action-id='chat' class='ms-PersonaCard-action' tabindex='1'><i class='ms-Icon ms-Icon--Chat'></i></li>",
+        "        <li data-action-id='phone' class='ms-PersonaCard-action is-active' tabindex='2'><i class='ms-Icon ms-Icon--Phone'></i></li>",
+        "        <li data-action-id='video' class='ms-PersonaCard-action' tabindex='3'><i class='ms-Icon ms-Icon--Video'></i></li>",
+        "        <li data-action-id='mail' class='ms-PersonaCard-action' tabindex='4'><i class='ms-Icon ms-Icon--Mail'></i></li>",
+        "        <li class='ms-PersonaCard-overflow' alt='View profile in Delve' title='View profile in Delve' >View profile</li>",
+        "        <li data-action-id='org' class='ms-PersonaCard-action ms-PersonaCard-orgChart' tabindex='5'><i class='ms-Icon ms-Icon--Org'></i></li>",
+        "    </ul>",
+        "    <div class='ms-PersonaCard-actionDetailBox'>",
+        "        <div data-detail-id='mail' class='ms-PersonaCard-details'>",
+        "            <div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Personal:</span> <a class='ms-Link' href='mailto:alton.lafferty@outlook.com'>alton.lafferty@outlook.com</a></div>",
+        "            <div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Work:</span> <a class='ms-Link' href='mailto:alton.lafferty@outlook.com'>altonlafferty@contoso.com</a></div>",
+        "        </div>",
+        "        <div data-detail-id='chat' class='ms-PersonaCard-details'>",
+        "            <div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Lync:</span> <a class='ms-Link' href='#'>Start Lync call</a></div>",
+        "        </div>",
+        "        <div data-detail-id='phone' class='ms-PersonaCard-details'>",
+        "            <div class='ms-PersonaCard-detailExpander'></div>",
+        "            <div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Details</div>",
+        "            <div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Personal:</span> 555.206.2443</div>",
+        "            <div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Work:</span> 555.929.8240</div>",
+        "        </div>",
+        "        <div data-detail-id='video' class='ms-PersonaCard-details'>",
+        "            <div class='ms-PersonaCard-detailLine'><span class='ms-PersonaCard-detailLabel'>Skype:</span> <a class='ms-Link' href='#'>Start Skype call</a></div>",
+        "        </div>",
+        "            ",
+        "        <div data-detail-id='org' class='ms-PersonaCard-details'>            ",
+        "            <!-- OrgChart goes here",
+        "                 Use snippet uifOrgChart   -->",
+        "        </div>",
+        "    </div>",
+        "</div>",
+        "",
+        "<script type='text/javascript'>",
+        "    var PersonaCardElement = document.querySelectorAll('.ms-PersonaCard');",
+        "    for(var i = 0; i < PersonaCardElement.length; i++) {",
+        "        new fabric.PersonaCard(PersonaCardElement[i]);",
+        "    }",
+        "</script>"
     ]
 }
 
@@ -1397,131 +950,122 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
 /******************* Pivot *************************/
 
 ,"Fabric Pivot": {
-    "prefix": "uif-pivot",
+    "prefix": "uifPivot",
     "description": "A navigational, layout component that allows users to switch between different sets of content.",
     "body": [
-                "<ul id='${1:id}' class='ms-Pivot'>     <!-- Additional classes: ms-Pivot--large, ms-Pivot--tabs     -->",  
-                "\t<!-- Pivot items go here  -->",
-                "\t<!-- Use uif-pivotItem snippet  -->",              
-                "\t<li class='ms-Pivot-link ms-Pivot-link--overflow'>",
-                "\t\t<i class='ms-Pivot-ellipsis ms-Icon ms-Icon--ellipsis'></i>",
-                "\t</li>",                
-                "</ul>"
+        "<div class='ms-Pivot '>     <!--   optional classes: ms-Pivot--tabs, ms-Pivot--large   -->",
+        "  <ul class='ms-Pivot-links'>",
+        "      <li class='ms-Pivot-link is-selected' data-content='uniqueID' title='Title' tabindex='1'>",
+        "        Label",
+        "      </li>",
+        "      <li class='ms-Pivot-link' data-content='uniqueID2' title='Title' tabindex='1'>",
+        "        Label2",
+        "      </li>        ",
+        "      <li class='ms-Pivot-link' tabindex='1'>",
+        "        <i class='ms-Pivot-ellipsis ms-Icon ms-Icon--More'></i>",
+        "      </li>",
+        "  </ul>",
+        "    <div class='ms-Pivot-content' data-content='uniqueID'>  <!--uniqueID must match <li> above-->",
+        "      Content for first tab...",
+        "    </div>",
+        "    <div class='ms-Pivot-content' data-content='uniqueID2'>  <!--uniqueID must match <li> above-->",
+        "      Content for second tab...",
+        "    </div>",
+        "    ",
+        "</div>",
+        "",
+        "<script type='text/javascript'>",
+        "  var PivotElements = document.querySelectorAll('.ms-Pivot');",
+        "  for(var i = 0; i < PivotElements.length; i++) {",
+        "    new fabric['Pivot'](PivotElements[i]);",
+        "  }",
+        "</script>"
     ]
 }
 
-,"Fabric Pivot item": {
-    "prefix": "uif-pivotItem",
-    "description": "An individual item in a Pivot",
-    "body": [
-                "<li class='ms-Pivot-link'>${1:Text}</li>     <!-- Optional class: is-selected     -->"                
-    ]
-}
 
-
-,"Fabric Pivot JS": {
-    "prefix": "uif-pivotJS",
-    "description": "Script required for Pivot component",
-    "body": [
-               "<script type='text/javascript'>",
-                "$(document).ready(function() {",
-                "\tif ($.fn.Pivot) {",
-                "\t\t$('.ms-Pivot').Pivot();",
-                "\t}",
-                "});",                
-                "</script>"
-    ]
-}
 
 /******************* Progress Indicator *************************/
 
 ,"Fabric Progress Indicator": {
-    "prefix": "uif-progress",
+    "prefix": "uifProgress",
     "description": "Progress indicator showing activity status.",
     "body": [
-                "<div id='${1:id}' class='ms-ProgressIndicator'>",
-                "\t<div class='ms-ProgressIndicator-itemName'>${2:Item Name}</div>",
-                "\t<div class='ms-ProgressIndicator-itemProgress'>",
-                "\t\t<div class='ms-ProgressIndicator-progressTrack'></div>",
-                "\t\t<div class='ms-ProgressIndicator-progressBar'></div>",
-                "\t</div>",
-                "\t<div class='ms-ProgressIndicator-itemDescription'>${3: Description}</div>",
-                "</div>"
-    ]
-}
-
-,"Fabric ProgressIndicator JS": {
-    "prefix": "uif-progressIndicatorJS",
-    "description": "Script required for ProgressIndicator component",
-    "body": [
-               "<script type='text/javascript'>",
-                "var component;",
-                "function initProgress(id){",
-                "if (typeof fabric !== 'undefined') {",
-                "\tif ('ProgressIndicator' in fabric) {",
-                "\t\tvar elm = document.getElementById(id);",
-                "\t\tcomponent = new fabric['ProgressIndicator'](elm);",
-                "\t\t}",
-                "\t}",
-                "}",
-                "$(function(){initProgress('id');});",                                         
-                "</script>"
+            "<div class='ms-ProgressIndicator'>",
+            "  <div class='ms-ProgressIndicator-itemName'></div>",
+            "  <div class='ms-ProgressIndicator-itemProgress'>",
+            "    <div class='ms-ProgressIndicator-progressTrack'></div>",
+            "    <div class='ms-ProgressIndicator-progressBar'></div>",
+            "  </div>",
+            "  <div class='ms-ProgressIndicator-itemDescription'></div>",
+            "</div>",
+            "",
+            "<script type='text/javascript'>",
+            "  var ProgressIndicatorElements = document.querySelectorAll('.ms-ProgressIndicator');",
+            "  for(var i = 0; i < ProgressIndicatorElements.length; i++) {",
+            "    let ProgressIndicator = new fabric['ProgressIndicator'](ProgressIndicatorElements[i]);",
+            "",
+            "    var progress = 0;",
+            "    setInterval(",
+            "      function() {",
+            "        if(progress < 100){",
+            "            progress++;",
+            "            ProgressIndicator.setProgressPercent(progress/100);",
+            "        }",
+            "      },",
+            "      50);",
+            "  }",
+            "</script>"
     ]
 }
 
 /******************* Search Box *************************/
 
 ,"Fabric SearchBox": {
-    "prefix": "uif-search",
+    "prefix": "uifSearch",
     "description": "Basic Office 365 Search field",
     "body": [
-                "<div id='${1:id}' class='ms-SearchBox'>",
-                "\t<input id='${1:id}-input' class='ms-SearchBox-field'>",
-                "\t<label class='ms-SearchBox-label'><i class='ms-SearchBox-icon ms-Icon ms-Icon--search'></i>Search</label>",
-                "\t<button class='ms-SearchBox-closeButton'><i class='ms-Icon ms-Icon--x'></i></button>",
-                "</div>"
-    ]
-}
-
-,"Fabric SearchBox JS": {
-    "prefix": "uif-searchBoxJS",
-    "description": "Script required for SearchBox component",
-    "body": [
-               "<script type='text/javascript'>",
-                "$(document).ready(function() {",
-                "\tif ($.fn.SearchBox) {",
-                "\t\t$('.ms-SearchBox').SearchBox();",
-                "\t}",
-                "});",                
-                "</script>"
+        "<div class='ms-SearchBox  '>",
+        "  <input class='ms-SearchBox-field' type='text' value=''>",
+        "  <label class='ms-SearchBox-label'>",
+        "    <i class='ms-SearchBox-icon ms-Icon ms-Icon--Search'></i>",
+        "    <span class='ms-SearchBox-text'>Search</span>",
+        "  </label>",
+        "  ",
+        "<div class='ms-CommandButton ms-SearchBox-clear ms-CommandButton--noLabel  '>",
+        "  <button class='ms-CommandButton-button'  >",
+        "      <span class='ms-CommandButton-icon '><i class='ms-Icon ms-Icon--Clear'></i></span><span class='ms-CommandButton-label'></span>  </button>",
+        "</div>",
+        "  ",
+        "  ",
+        "</div>",
+        "<script type='text/javascript'>",
+        "  var SearchBoxElements = document.querySelectorAll('.ms-SearchBox');",
+        "  for(var i = 0; i < SearchBoxElements.length; i++) {",
+        "    new fabric['SearchBox'](SearchBoxElements[i]);",
+        "  }",
+        "</script>"
     ]
 }
 
 /******************* Spinner *************************/
 ,"Fabric Spinner": {
-    "prefix": "uif-spinner",
+    "prefix": "uifSpinner",
     "description": "An indeterminate progress/loading indicator",
     "body": [
-                "<div id='${1:id}' class='ms-Spinner'>     <!-- Additional class: ms-Spinner--large     -->",
-                "\t<div class='ms-Spinner-label'>${2:Loading...}</div>",
-                "</div>"
-    ]
-}
-
-,"Fabric Spinner JS": {
-    "prefix": "uif-spinnerJS",
-    "description": "Script required for Spinner component",
-    "body": [
-               "<script type='text/javascript'>",
-               "function startSpinner(id, text){",
-               "\tif(typeof text === 'string'){",
-               "\t\tvar label = $('#' + id).children('div.ms-Spinner-label')[0];",
-               "\t\t$(label).text(text);",
-               "\t}",
-               "\tvar elm = document.getElementById(id);",
-               "\tvar component = new fabric['Spinner'](elm);",
-               "\telm.style.display = 'block';",
-               "}",              
+                "<div class='ms-Spinner' id='spin'>     <!-- Additional class: ms-Spinner--large     -->",
+                "    <div class='ms-Spinner-label' id='spinnerLabel'></div>",
+                "</div>",
+                "",
+                "<script type='text/javascript'>",
+               "    function startSpinner(id, text){",
+               "        var lbl = document.getElementById('spinnerLabel')",
+               "        lbl.innerText = text;",
+               "        var elm = document.getElementById(id);",
+               "        var component = new fabric['Spinner'](elm);",
+               "        elm.style.display = 'block';",
+               "    }",   
+               "    startSpinner('spin','Loading...please wait.');",           
                 "</script>"
     ]
 }
@@ -1529,232 +1073,101 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
 /******************* Table *************************/
 
 ,"Fabric Table Shell": {
-    "prefix": "uif-table",
+    "prefix": "uifTable",
     "description": "Fabric Table",
     "body": [
-                "<div id='${1:id}' class='ms-Table'>",
-                "\t<!-- Individual rows go here -->",
-                "\t<!-- Use snippet uif-tableRow -->",
-                "</div>"
+                "<table class='ms-Table'>     <!--  optional classes: ms-Table--fixed, ms-Table--selectable  -->",
+                "    <!-- Use regular HTML table markup (thead, tbody, tr, td, etc) to build table -->",
+                "</table>",
+                "",
+                "<script type='text/javascript'>",
+                "    var TableElements = document.querySelectorAll('.ms-Table');",
+                "    for(var i = 0; i < TableElements.length; i++) {",
+                "        new fabric['Table'](TableElements[i]);",
+                "    }",
+                "</script>"
     ]
 }
 
-,"Fabric Table Row": {
-    "prefix": "uif-tableRow",
-    "description": "A row for inclusion in a Fabric Table",
-    "body": [
-                "<div class='ms-Table-row'>     <!-- Additional class: is-selected     -->",
-                "\t<span class='ms-Table-rowCheck'></span>",
-                "\t<span class='ms-Table-cell'>Col 1</span>",
-                "\t<span class='ms-Table-cell'>Col 2</span>",
-                "\t<span class='ms-Table-cell'>Col 3</span>",
-                "</div>"
-    ]
-}
 
 /******************* TextField *************************/
 
 ,"Fabric Text Field": {
-    "prefix": "uif-textField",
+    "prefix": "uifTextField",
     "description": "A standard text input",
     "body": [
-                "<div id='${1:id}' class='ms-TextField'>",
-                "\t<label id='${1:id}-label' class='ms-Label'>${2:Label Text}</label>",
-                "\t<input id='${1:id}-input' class='ms-TextField-field'>",
-                "\t<span id='${1:id}-desc' class='ms-TextField-description'>${3:Field Description}</span>",
-                "</div>"
-    ]
-}
-
-,"Fabric Text Field Underlined": {
-    "prefix": "uif-textFieldUnderlined",
-    "description": "A text input shown as a line",
-    "body": [
-                "<div id='${1:id}' class='ms-TextField ms-TextField--underlined'>",
-                "\t<label id='${1:id}-label' class='ms-Label'>${2:Label Text}</label>",
-                "\t<input id='${1:id}-input' class='ms-TextField-field'>",
-                "</div>"
-    ]
-}
-
-,"Fabric Text Field Placeholder": {
-    "prefix": "uif-textFieldPlaceholder",
-    "description": "A text input with the Label as a placeholder",
-    "body": [
-                "<div id='${1:id}' class='ms-TextField ms-TextField--placeholder'>",
-                "\t<label id='${1:id}-label' class='ms-Label'>${2:Label Text}</label>",
-                "\t<input id='${1:id}-input' class='ms-TextField-field'>",
-                "</div>"
-    ]
-}
-
-,"Fabric Text Field Multiline": {
-    "prefix": "uif-textFieldMultiline",
-    "description": "A multiline text input",
-    "body": [
-                "<div id='${1:id}' class='ms-TextField ms-TextField--multiline'>",
-                "\t<label id='${1:id}-label' class='ms-Label'>${2:Label Text}</label>",
-                "\t<textarea id='${1:id}-textarea' class='ms-TextField-field'></textarea>",
-                "</div>"
-    ]
-}
-
-,"Fabric TextField JS": {
-    "prefix": "uif-textFieldJS",
-    "description": "Script required for TextField component",
-    "body": [
-               "<script type='text/javascript'>",
-                "$(document).ready(function() {",
-                "\tif ($.fn.TextField) {",
-                "\t\t$('.ms-TextField').TextField();",
-                "\t}",
-                "});",                
-                "</script>"
+            "<div class='ms-TextField '>     <!-- optional classes: ms-TextField--multiline, ms-TextField--placeholder, ms-TextField--underlined, is-disabled   -->",
+            "  <label class='ms-Label'>Name</label>",
+            "  <input class='ms-TextField-field' type='text' value='' placeholder='' ></input>  <!--Use <textarea for multiline  -->",
+            "</div>",
+            "",
+            "<script type='text/javascript'>",
+            "    var TextFieldElements = document.querySelectorAll('.ms-TextField');",
+            "    for(var i = 0; i < TextFieldElements.length; i++) {",
+            "        new fabric['TextField'](TextFieldElements[i]);",
+            "    }",
+            "</script>"
     ]
 }
 
 
 /******************* Toggle *************************/
 ,"Fabric Toggle": {
-    "prefix": "uif-toggle",
+    "prefix": "uifToggle",
     "description": "A boolean visualization that allows for users to select between two states, typically on and off",
     "body": [
-                "<div id='${1:id}' class='ms-Toggle'>     <!--    optional class: ms-Toggle--textLeft     -->",    
-                "\t<span class='ms-Toggle-description'>${2:Description}</span>",
-                "\t<input type='checkbox' id='${1:id}-checkbox' class='ms-Toggle-input' />",
-                "\t<label for='${1:id}-checkbox' class='ms-Toggle-field'>",
-                "\t\t<span class='ms-Label ms-Label--off'>${3:Off Label}</span>",
-                "\t\t<span class='ms-Label ms-Label--on'>${4:On Label}</span>",
-                "\t</label>",
-                "</div>"
-    ]
-}
-
-/******************* Persona *************************/
-,"Fabric Persona": {
-    "prefix": "uif-persona",
-    "description": "A responsive control for showing user information",
-    "body": [
-                "<div class='ms-Persona'>     <!-- Additional classes: ms-Persona--square, ms-Persona--tiny, ms-Persona--xs, ms-Persona--sm, ms-Persona--lg, ms-Persona--xl  -->",
-                "\t<div class='ms-Persona-imageArea'>",
-                "\t\t<div class='ms-Persona-initials ms-Persona-initials--blue'>DM</div>",
-                "\t\t<img class='ms-Persona-image' src=''>",
-                "\t</div>",
-                "\t<div class='ms-Persona-presence'></div>",
-                "\t<div class='ms-Persona-details'>",
-                "\t\t<div class='ms-Persona-primaryText'>David Mann</div>",
-                "\t\t<div class='ms-Persona-secondaryText'>Secondary Text</div>",
-                "\t\t<div class='ms-Persona-tertiaryText'>Tertiary Text</div>",
-                "\t\t<div class='ms-Persona-optionalText'>Optional Text</div>",
-                "\t</div>",
-                "</div>"
-    ]
-}
-
-/******************* People Picker *************************/
-,"Fabric PeoplePicker": {
-    "prefix": "uif-peoplePicker",
-    "description": "Sample markup for the PeoplePicker component",
-    "body": [
-                "<div class='ms-PeoplePicker'>",
-                "\t<div class='ms-PeoplePicker-searchBox'>",
-                "\t\t<input class='ms-PeoplePicker-searchField' type='text'>",
-                "\t</div>",
-                "\t<div class='ms-PeoplePicker-results'>",
-                "\t\t<div class='ms-PeoplePicker-resultGroups'>",
-                "\t\t\t<div class='ms-PeoplePicker-resultGroup'>",
-                "\t\t\t\t<div class='ms-PeoplePicker-resultGroupTitle'>Group Heading</div>",
-                "\t\t\t\t<ul class='ms-PeoplePicker-resultList'>",
-                "\t\t\t\t\t <!-- Results go here.  Use uif-peoplePickerResult snippet --> ",                
-                "\t\t\t\t</ul>",
-                "\t\t\t</div>",
-                "\t\t</div>",
-                "\t\t<div class='ms-PeoplePicker-searchMore js-searchMore'>",
-                "\t\t\t<button class='ms-PeoplePicker-searchMoreBtn'>",
-                "\t\t\t\t<div class='ms-PeoplePicker-searchMoreIcon'>",
-                "\t\t\t\t\t<i class='ms-Icon ms-Icon--search'></i>",
-                "\t\t\t\t</div>",
-                "\t\t\t\t<div class='ms-PeoplePicker-searchMoreSecondary'>Showing top n results</div>",
-                "\t\t\t\t<div class='ms-PeoplePicker-searchMorePrimary'>Search Contacts &amp; Directory</div>",
-                "\t\t\t</button>",
-                "\t\t</div>",
-                "\t</div>",
-                "</div>"
-
-    ]
-}
-
-,"Fabric PeoplePicker Result": {
-    "prefix": "uif-peoplePickerResult",
-    "description": "A single person result for the PeoplePicker",
-    "body": [
-                "<li class='ms-PeoplePicker-result'>",
-                "\t<div tabindex='0' role='button' class='ms-PeoplePicker-resultBtn'>",
-                "\t\t<div class='ms-Persona ms-Persona--square'>     <!-- Additional classes: ms-Persona--[available|busy|away|blocked|offline]  -->",
-                "\t\t\t<div class='ms-Persona-imageArea'>",
-                "\t\t\t\t<i class='ms-Persona-placeholder ms-Icon ms-Icon--person'></i>",
-                "\t\t\t\t<img class='ms-Persona-image' src=''>",
-                "\t\t\t</div>",
-                "\t\t\t<div class='ms-Persona-presence'></div>",
-                "\t\t\t<div class='ms-Persona-details'>",
-                "\t\t\t\t<div class='ms-Persona-primaryText'>Name</div>",
-                "\t\t\t\t<div class='ms-Persona-secondaryText'>Dept</div>",
-                "\t\t\t</div>",
-                "\t\t\t<button class='ms-PeoplePicker-resultAction js-resultRemove'><i class='ms-Icon ms-Icon--x'></i></button>",                
-                "\t\t</div>",
-                "\t</div>",
-                "</li>"
-    ]
-}
-
-
-,"Fabric PeoplePicker JS": {
-    "prefix": "uif-peoplePickerJS",
-    "description": "JavaScript to initialize PeoplePicker",
-    "body": [
+                "<div class='ms-Toggle'>     <!--    optional class: ms-Toggle--textLeft     -->",    
+                "    <span class='ms-Toggle-description'>Description</span>",
+                "    <input type='checkbox' id='toggle1' class='ms-Toggle-input' />",
+                "    <label for='toggle1' class='ms-Toggle-field'>",
+                "        <span class='ms-Label ms-Label--off'>Off</span>",
+                "        <span class='ms-Label ms-Label--on'>On</span>",
+                "    </label>",
+                "</div>",
                 "<script type='text/javascript'>",
-                "$(document).ready(function() {",
-                "\tif ($.fn.PeoplePicker) {",
-                "\t\t$('.ms-PeoplePicker').PeoplePicker();",
-                "\t}",
-                "});",                
-                "</script>"
+                "    var ToggleElements = document.querySelectorAll('.ms-Toggle');",
+                "    for(var i = 0; i < ToggleElements.length; i++) {",
+                "        new fabric['Toggle'](ToggleElements[i]);",
+                "    }",
+                "</script>",
     ]
 }
+
+
 
 /******************* Grid *************************/
 
 ,"Fabric Grid Shell": {
-    "prefix": "uif-gridShell",
+    "prefix": "uifGridShell",
     "description": "",
     "body": [
                 "<div class='ms-Grid'>", 
-                "\t\t<!-- Grid rows go here, use snippet uif-gridRow  -->",
+                "        <!-- Grid rows go here, use snippet uifGridRow  -->",
                 "</div>"
     ]
 }
 
 
 ,"Fabric Grid Row": {
-    "prefix": "uif-gridRow",
+    "prefix": "uifGridRow",
     "description": "An individual row in the Fabric grid",
     "body": [
-                "\t<div class='ms-Grid-row'>",
-                "\t\t<!-- Grid columns go here, use snippet uif-gridCol  -->",
-                "\t</div>"
+                "    <div class='ms-Grid-row'>",
+                "        <!-- Grid columns go here, use snippet uifGridCol  -->",
+                "    </div>"
     ]
 }
 
 ,"Fabric Grid Column": {
-    "prefix": "uif-gridCol",
+    "prefix": "uifGridCol",
     "description": "An individual column in the Fabric grid",
     "body": [
-                "\t<div class='ms-Grid-col '>Text</div>   "
+                "    <div class='ms-Grid-col '>Text</div>   "
     ]
 }
 
 ,"Fabric Grid Row Classes": {
-    "prefix": "uif-gridClasses",
+    "prefix": "uifGridClasses",
     "description": "Inserts a cheatsheet of grid styles as a comment",
     "body": [
                 "<!--",
@@ -1774,9 +1187,4 @@ All HTML (c) Microsoft.  Adapted from GitHub source files.
                 "-->"
     ]
 }
-
-
-
 }
-
-
