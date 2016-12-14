@@ -1095,7 +1095,7 @@ All HTML, JavaScript, CSS (c) Microsoft.  Adapted from GitHub source files.
     "body": [
             "<div class='ms-TextField '>     <!-- optional classes: ms-TextField--multiline, ms-TextField--placeholder, ms-TextField--underlined, is-disabled   -->",
             "  <label class='ms-Label'>Name</label>",
-            "  <input class='ms-TextField-field' type='text' value='' placeholder='' ></input>  <!--Use <textarea for multiline  -->",
+            "  <input class='ms-TextField-field' type='text' value='' placeholder='' />  <!--Use <textarea> for multiline  -->",
             "</div>",
             "",
             "<script type='text/javascript'>",
